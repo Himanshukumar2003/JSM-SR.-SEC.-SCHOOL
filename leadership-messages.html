@@ -16,6 +16,7 @@
 
 <body>
   <div class="nav">
+    <!-- Top Bar -->
     <div class="top-bar">
       <div class="container">
         <div class="top-bar-content">
@@ -42,61 +43,47 @@
         </div>
       </div>
     </div>
+
+    <!-- Main Navbar -->
     <div class="navbar-section" id="navbarSection">
       <nav class="main-nav">
         <div class="container d-flex align-items-center justify-content-between">
-
           <!-- Logo (Left) -->
-          <a href="#" class="navbar-brand">
-            <img src="/img/logo.png" alt="Logo" class="logo" />
+          <a href="index.html" class="navbar-brand">
+            <img src="img/logo.png" alt="Logo" class="logo" />
           </a>
 
           <!-- Nav Links (Center) -->
           <ul class="nav-center">
             <li><a href="index.html" class="active">Home</a></li>
+
+            <!-- About us Dropdown -->
             <li>
-              <a href="#">
-                About us <i class="fa fa-chevron-down"></i>
-              </a>
+              <a href="#"> About us <i class="fa fa-chevron-down"></i> </a>
               <div class="dropdown-menu-custom">
-                <a href="about.html"> About</a>
-                <a href="vision-mission.html"> Our Vision & Mission
-                </a>
-                <a href="chairman-message.html"> Chairman Message
-                </a>
-
-                <a href="principal-message.html"> Principal Message
-                </a>
-
-
+                <a href="about.html">About</a>
+                <a href="vision-mission.html">Our Vision & Mission</a>
+                <a href="chairman-message.html">Chairman Message</a>
+                <a href="principal-message.html">Principal Message</a>
               </div>
             </li>
 
-            <!-- Dropdown: Admission -->
+            <!-- Admission Dropdown -->
             <li>
-              <a href="#">
-                Admission <i class="fa fa-chevron-down"></i>
-              </a>
+              <a href="#"> Admission <i class="fa fa-chevron-down"></i> </a>
               <div class="dropdown-menu-custom">
-                <a href="admission-information.html"> Admission
-                  Information</a>
-                <a href="#"> Download Registration
-                  Form</a>
+                <a href="admission-information.html">Admission Information</a>
+                <a href="#">Download Registration Form</a>
                 <a href="admission-process.html">Admission Process</a>
-                <a href=""> Admission Schedule</a>
-                <a href="#"> Medical Information
-                  Form
-                </a>
-                <a href="new-register.html"> Online Registration</a>
+                <a href="#">Admission Schedule</a>
+                <a href="#">Medical Information Form</a>
+                <a href="new-register.html">Online Registration</a>
               </div>
             </li>
 
-
+            <!-- Our Campus Dropdown -->
             <li>
-              <a href="#">
-
-                Our Campus <i class="fa fa-chevron-down"></i>
-              </a>
+              <a href="#"> Our Campus <i class="fa fa-chevron-down"></i> </a>
               <div class="dropdown-menu-custom">
                 <a href="campus.html">Campus</a>
                 <a href="language-lab.html">Language Lab</a>
@@ -111,48 +98,147 @@
               </div>
             </li>
 
-            <!-- Dropdown: Academics -->
+            <!-- Academics Dropdown -->
             <li>
-              <a href="#">
-                Academics <i class="fa fa-chevron-down"></i>
-              </a>
+              <a href="#"> Academics <i class="fa fa-chevron-down"></i> </a>
               <div class="dropdown-menu-custom">
                 <a href="#">Programs</a>
-                <a href="#"> Faculty</a>
+                <a href="#">Faculty</a>
                 <a href="#">Academic Calendar</a>
                 <a href="#">Departments</a>
               </div>
             </li>
 
+            <!-- Gallery Dropdown -->
             <li>
-              <a href="#">
-
-                Gallery <i class="fa fa-chevron-down"></i>
-              </a>
+              <a href="#"> Gallery <i class="fa fa-chevron-down"></i> </a>
               <div class="dropdown-menu-custom">
-
-                <a href="photo-gallery.html"> Photo Gallery</a>
-                <a href="video-gallery.html"> Video Gallery</a>
-                <a href="events-and-celebrations">Events and celebrations </a>
+                <a href="photo-gallery.html">Photo Gallery</a>
+                <a href="video-gallery.html">Video Gallery</a>
+                <a href="events-and-celebrations.html">Events and Celebrations</a>
               </div>
             </li>
+
             <li><a href="blog.html">Blogs</a></li>
             <li><a href="contact.html">Contact</a></li>
           </ul>
 
-          <!-- Apply Now Button (RiFVght) -->
-          <button class="btn-apply">
-            <i class="fa fa-paper-plane"></i>
-            <span>Apply Now</span>
-          </button>
-
+          <!-- Apply Now Button (Right) -->
+          <div class="d-none d-lg-inline">
+            <button class="btn-apply">
+              <i class="fa fa-paper-plane"></i>
+              <span>Apply Now</span>
+            </button>
+          </div>
           <!-- Mobile Menu Button -->
           <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Toggle menu">
             <span class="menu-icon"></span>
           </button>
-
         </div>
       </nav>
+    </div>
+  </div>
+
+  <!-- ═══ MOBILE NAV OVERLAY ═══ -->
+  <div class="mobile-nav-overlay" id="mobileOverlay"></div>
+
+  <!-- ═══ MOBILE NAV PANEL ═══ -->
+  <div class="mobile-nav" id="mobileNav">
+    <div class="mobile-nav-header">
+      <a href="index.html" class="navbar-brand">
+        <img src="img/logo.png" alt="Logo" class="logo" />
+      </a>
+
+      <button class="mobile-nav-close" id="mobileNavClose">
+        <i class="fa fa-times"></i>
+      </button>
+    </div>
+
+    <div class="mobile-nav-body">
+      <ul class="mobile-nav-links">
+        <li><a href="index.html" class="active">Home</a></li>
+
+        <!-- About us Mobile Dropdown -->
+        <li>
+          <a href="#" class="mobile-dropdown-toggle">
+            About us <i class="fa fa-chevron-down"></i>
+          </a>
+          <div class="mobile-dropdown">
+            <a href="about.html">About</a>
+            <a href="vision-mission.html">Our Vision & Mission</a>
+            <a href="chairman-message.html">Chairman Message</a>
+            <a href="principal-message.html">Principal Message</a>
+          </div>
+        </li>
+
+        <!-- Admission Mobile Dropdown -->
+        <li>
+          <a href="#" class="mobile-dropdown-toggle">
+            Admission <i class="fa fa-chevron-down"></i>
+          </a>
+          <div class="mobile-dropdown">
+            <a href="admission-information.html">Admission Information</a>
+            <a href="#">Download Registration Form</a>
+            <a href="admission-process.html">Admission Process</a>
+            <a href="#">Admission Schedule</a>
+            <a href="#">Medical Information Form</a>
+            <a href="new-register.html">Online Registration</a>
+          </div>
+        </li>
+
+        <!-- Our Campus Mobile Dropdown -->
+        <li>
+          <a href="#" class="mobile-dropdown-toggle">
+            Our Campus <i class="fa fa-chevron-down"></i>
+          </a>
+          <div class="mobile-dropdown">
+            <a href="campus.html">Campus</a>
+            <a href="language-lab.html">Language Lab</a>
+            <a href="medical-room.html">Medical Room</a>
+            <a href="science-lab.html">Science Lab</a>
+            <a href="smart-classes.html">Smart Classes</a>
+            <a href="school-library.html">School Library</a>
+            <a href="school-transport.html">School Transport</a>
+            <a href="counselling-area.html">Counselling Area</a>
+            <a href="ongoing-classes.html">Ongoing Classes</a>
+            <a href="house-system.html">House System</a>
+          </div>
+        </li>
+
+        <!-- Academics Mobile Dropdown -->
+        <li>
+          <a href="#" class="mobile-dropdown-toggle">
+            Academics <i class="fa fa-chevron-down"></i>
+          </a>
+          <div class="mobile-dropdown">
+            <a href="#">Programs</a>
+            <a href="#">Faculty</a>
+            <a href="#">Academic Calendar</a>
+            <a href="#">Departments</a>
+          </div>
+        </li>
+
+        <!-- Gallery Mobile Dropdown -->
+        <li>
+          <a href="#" class="mobile-dropdown-toggle">
+            Gallery <i class="fa fa-chevron-down"></i>
+          </a>
+          <div class="mobile-dropdown">
+            <a href="photo-gallery.html">Photo Gallery</a>
+            <a href="video-gallery.html">Video Gallery</a>
+            <a href="events-and-celebrations.html">Events and Celebrations</a>
+          </div>
+        </li>
+
+        <li><a href="blog.html">Blogs</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </div>
+
+    <div class="mobile-nav-footer">
+      <a href="new-register.html" class="mobile-nav-cta">
+        <i class="fa fa-paper-plane"></i> Apply Now
+      </a>
     </div>
   </div>
   <!-- ═══ PAGE HERO ═══ -->
