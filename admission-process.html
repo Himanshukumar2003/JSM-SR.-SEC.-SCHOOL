@@ -1,0 +1,1604 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Admission Process — JSM SR. SEC. SCHOOL</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,800;1,400&family=Source+Sans+3:wght@300;400;600&display=swap"
+        rel="stylesheet" />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" rel="stylesheet" />
+    <link rel="stylesheet" href="style.css">
+
+    <style>
+        /* ================================================================
+   ADMISSION SCHEDULE — PAGE-SPECIFIC STYLES
+   All classes prefixed "as-" to avoid collision with style.css
+================================================================ */
+
+        /* ── Quick Info Strip ── */
+        .as-strip {
+            background: var(--crimson);
+            padding: 13px 0;
+            border-bottom: 1px solid rgba(0, 0, 0, .15);
+        }
+
+        .as-strip .container {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 28px;
+            flex-wrap: wrap;
+        }
+
+        .as-strip-item {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            font-size: .84rem;
+            font-weight: 500;
+            color: rgba(255, 255, 255, .88);
+            white-space: nowrap;
+        }
+
+        .as-strip-item i {
+            color: var(--gold-light);
+            width: 15px;
+            text-align: center;
+        }
+
+        .as-strip-item strong {
+            color: #fff;
+        }
+
+        .as-strip-sep {
+            width: 1px;
+            height: 22px;
+            background: rgba(255, 255, 255, .2);
+        }
+
+        /* ── Shared section helpers ── */
+        .as-section {
+            padding: var(--section-py) 0;
+        }
+
+        .as-bg-white {
+            background: var(--white);
+        }
+
+        .as-bg-grey {
+            background: var(--light-grey);
+        }
+
+        .as-bg-dark {
+            background: var(--crimson-dark);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .as-bg-dark::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: url('img/hero-bg.webp') center / cover no-repeat;
+            opacity: .05;
+            pointer-events: none;
+        }
+
+        /* Shared heading */
+        .as-heading {
+            font-size: var(--heading-lg);
+            font-weight: 800;
+            color: var(--dark);
+            line-height: 1.15;
+            margin-bottom: 0;
+            position: relative;
+            padding-bottom: 18px;
+        }
+
+        .as-heading::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 60px;
+            height: 4px;
+            background: linear-gradient(90deg, var(--crimson), var(--gold));
+            border-radius: 2px;
+        }
+
+        .as-heading em {
+            font-style: italic;
+            color: var(--crimson);
+        }
+
+        .as-heading.wh {
+            color: #fff;
+        }
+
+        .as-heading.wh em {
+            color: var(--gold);
+        }
+
+        .as-heading.wh::after {
+            background: linear-gradient(90deg, var(--gold), var(--gold-light));
+        }
+
+        .as-eyebrow {
+            display: inline-flex;
+            align-items: center;
+            gap: 7px;
+            font-size: .68rem;
+            font-weight: 700;
+            letter-spacing: .18em;
+            text-transform: uppercase;
+            color: var(--crimson);
+            margin-bottom: 12px;
+        }
+
+        .as-eyebrow::before {
+            content: '';
+            width: 20px;
+            height: 2px;
+            background: var(--crimson);
+            border-radius: 2px;
+        }
+
+        .as-eyebrow.gold {
+            color: var(--gold-light);
+        }
+
+        .as-eyebrow.gold::before {
+            background: var(--gold);
+        }
+
+        .as-body {
+            font-size: .95rem;
+            color: var(--mid-grey);
+            line-height: 1.78;
+        }
+
+        .as-body.wh {
+            color: rgba(255, 255, 255, .62);
+        }
+
+        /* Mode badge */
+        .as-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 7px;
+            padding: 5px 16px;
+            border-radius: var(--radius-pill);
+            font-size: .68rem;
+            font-weight: 700;
+            letter-spacing: .1em;
+            text-transform: uppercase;
+            margin-bottom: 14px;
+        }
+
+        .as-badge-off {
+            background: rgba(43, 57, 97, .08);
+            color: var(--crimson-dark);
+            border: 1px solid rgba(43, 57, 97, .18);
+        }
+
+        .as-badge-on {
+            background: rgba(239, 130, 40, .1);
+            color: var(--gold-dark);
+            border: 1px solid rgba(239, 130, 40, .22);
+        }
+
+        /* ═══════════════════════════════════
+   MILESTONE CARDS (3 columns)
+═══════════════════════════════════ */
+        .as-card-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 22px;
+            margin-top: 52px;
+        }
+
+        .as-card {
+            border: 1px solid var(--border);
+            border-radius: var(--radius-lg);
+            overflow: hidden;
+            background: var(--white);
+            box-shadow: var(--shadow-sm);
+            transition: box-shadow var(--transition-med), transform var(--transition-med), border-color var(--transition-med);
+        }
+
+        .as-card:hover {
+            box-shadow: var(--shadow-hover);
+            transform: translateY(-6px);
+            border-color: rgba(43, 57, 97, .2);
+        }
+
+        /* Card header */
+        .as-card-hd {
+            background: var(--crimson-dark);
+            padding: 24px 26px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .as-card-hd::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: radial-gradient(ellipse at 90% 20%, rgba(239, 130, 40, .15), transparent 65%);
+            pointer-events: none;
+        }
+
+        .as-card-bgnum {
+
+            font-size: 5.5rem;
+            font-weight: 800;
+            color: rgba(255, 255, 255, .055);
+            line-height: 1;
+            position: absolute;
+            right: 8px;
+            bottom: -10px;
+            user-select: none;
+            pointer-events: none;
+        }
+
+        .as-card-ico {
+            width: 44px;
+            height: 44px;
+            border-radius: 10px;
+            background: rgba(255, 255, 255, .12);
+            border: 1px solid rgba(255, 255, 255, .18);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--gold-light);
+            font-size: 1.1rem;
+            margin-bottom: 12px;
+            position: relative;
+            z-index: 1;
+        }
+
+        .as-card-title {
+
+            font-size: 1rem;
+            font-weight: 700;
+            color: #fff;
+            line-height: 1.3;
+            position: relative;
+            z-index: 1;
+        }
+
+        /* Card body rows */
+        .as-card-bd {
+            padding: 20px 24px;
+        }
+
+        .as-row {
+            display: flex;
+            align-items: flex-start;
+            gap: 11px;
+            padding: 8px 0;
+            border-bottom: 1px solid var(--border);
+        }
+
+        .as-row:last-of-type {
+            border-bottom: none;
+        }
+
+        .as-row-ico {
+            width: 27px;
+            height: 27px;
+            border-radius: 7px;
+            background: rgba(43, 57, 97, .07);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--crimson);
+            font-size: .7rem;
+            flex-shrink: 0;
+            margin-top: 2px;
+        }
+
+        .as-row-lbl {
+            font-size: .66rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: .08em;
+            color: var(--mid-grey);
+            margin-bottom: 2px;
+        }
+
+        .as-row-val {
+            font-size: .86rem;
+            font-weight: 600;
+            color: var(--dark);
+            line-height: 1.45;
+        }
+
+        /* Alert banners */
+        .as-alert {
+            margin-top: 13px;
+            padding: 9px 13px;
+            border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
+            font-size: .79rem;
+            font-weight: 500;
+            line-height: 1.55;
+        }
+
+        .as-alert-warn {
+            background: rgba(192, 22, 44, .06);
+            border-left: 3px solid var(--crimson);
+            color: var(--crimson);
+        }
+
+        .as-alert-tip {
+            background: rgba(239, 130, 40, .08);
+            border-left: 3px solid var(--gold);
+            color: var(--gold-dark);
+        }
+
+        /* ═══════════════════════════════════
+   STEPS (numbered vertical list)
+═══════════════════════════════════ */
+        .as-steps {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .as-step {
+            display: flex;
+            gap: 18px;
+            position: relative;
+        }
+
+        .as-step:not(:last-child)::after {
+            content: '';
+            position: absolute;
+            left: 18px;
+            top: 40px;
+            bottom: 0;
+            width: 2px;
+            background: linear-gradient(to bottom, var(--crimson), rgba(43, 57, 97, .08));
+        }
+
+        .as-step-num {
+            flex-shrink: 0;
+            width: 38px;
+            height: 38px;
+            border-radius: 50%;
+            background: var(--crimson-dark);
+            color: #fff;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            font-size: .92rem;
+            font-weight: 800;
+            position: relative;
+            z-index: 1;
+            transition: background var(--transition-fast), transform var(--transition-fast);
+        }
+
+        .as-step:hover .as-step-num {
+            background: var(--gold);
+            transform: scale(1.1);
+        }
+
+        .as-step-body {
+            padding: 7px 0 24px;
+        }
+
+        .as-step-title {
+            font-size: .96rem;
+            font-weight: 700;
+            color: var(--dark);
+            margin-bottom: 4px;
+            transition: color var(--transition-fast);
+        }
+
+        .as-step:hover .as-step-title {
+            color: var(--crimson);
+        }
+
+        .as-step-desc {
+            font-size: .84rem;
+            color: var(--mid-grey);
+            line-height: 1.65;
+            margin: 0;
+        }
+
+        /* ═══════════════════════════════════
+   DOCS CARD (dark crimson)
+═══════════════════════════════════ */
+        .as-docs-card {
+            background: var(--crimson-dark);
+            border-radius: var(--radius-lg);
+            padding: 32px 28px;
+            position: relative;
+            overflow: hidden;
+            height: 100%;
+        }
+
+        .as-docs-card::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: radial-gradient(ellipse at 90% 10%, rgba(239, 130, 40, .12), transparent 60%);
+            pointer-events: none;
+        }
+
+        .as-docs-card-title {
+
+            font-size: 1.2rem;
+            font-weight: 700;
+            color: #fff;
+            margin-bottom: 4px;
+            position: relative;
+        }
+
+        .as-docs-card-sub {
+            font-size: .79rem;
+            color: rgba(255, 255, 255, .48);
+            margin-bottom: 22px;
+            position: relative;
+        }
+
+        .as-docs-list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            position: relative;
+        }
+
+        .as-docs-list li {
+            display: flex;
+            align-items: flex-start;
+            gap: 10px;
+            font-size: .86rem;
+            color: rgba(255, 255, 255, .82);
+            line-height: 1.5;
+        }
+
+        .as-doc-dot {
+            width: 25px;
+            height: 25px;
+            border-radius: 6px;
+            background: rgba(239, 130, 40, .18);
+            border: 1px solid rgba(239, 130, 40, .28);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--gold-light);
+            font-size: .66rem;
+            flex-shrink: 0;
+            margin-top: 1px;
+        }
+
+        /* Address & tips boxes */
+        .as-info-box {
+            background: var(--white);
+            border: 1px solid var(--border);
+            border-radius: var(--radius-lg);
+            padding: 20px 24px;
+            box-shadow: var(--shadow-sm);
+        }
+
+        .as-info-lbl {
+            font-size: .66rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: .13em;
+            color: var(--crimson);
+            margin-bottom: 10px;
+        }
+
+        .as-addr-line {
+            display: flex;
+            align-items: flex-start;
+            gap: 8px;
+            font-size: .9rem;
+            font-weight: 600;
+            color: var(--dark);
+        }
+
+        .as-addr-line i {
+            color: var(--gold);
+            margin-top: 3px;
+        }
+
+        .as-addr-timing {
+            display: flex;
+            align-items: center;
+            gap: 7px;
+            font-size: .81rem;
+            color: var(--mid-grey);
+            margin-top: 9px;
+        }
+
+        .as-addr-timing i {
+            color: var(--crimson);
+        }
+
+        /* Verification block */
+        .as-verif {
+            background: var(--light-grey);
+            border-radius: var(--radius-lg);
+            padding: 32px 28px;
+            border-left: 5px solid var(--crimson);
+        }
+
+        .as-verif-title {
+            display: flex;
+            align-items: center;
+            gap: 9px;
+
+            font-size: 1.15rem;
+            font-weight: 700;
+            color: var(--dark);
+            margin-bottom: 16px;
+        }
+
+        .as-verif-title i {
+            color: var(--crimson);
+        }
+
+        .as-verif-list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+            gap: 11px;
+        }
+
+        .as-verif-list li {
+            display: flex;
+            align-items: flex-start;
+            gap: 10px;
+            font-size: .88rem;
+            color: var(--dark-soft);
+            line-height: 1.65;
+        }
+
+        .as-verif-list li i {
+            color: var(--crimson);
+            font-size: .7rem;
+            margin-top: 5px;
+            flex-shrink: 0;
+        }
+
+        /* Tips list */
+        .as-tips-list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+            gap: 9px;
+        }
+
+        .as-tips-list li {
+            display: flex;
+            align-items: flex-start;
+            gap: 9px;
+            font-size: .84rem;
+            color: var(--dark-soft);
+            line-height: 1.5;
+        }
+
+        .as-tip-ico {
+            width: 25px;
+            height: 25px;
+            border-radius: 6px;
+            background: rgba(43, 57, 97, .07);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--crimson);
+            font-size: .66rem;
+            flex-shrink: 0;
+            margin-top: 1px;
+        }
+
+        /* ═══════════════════════════════════
+   INQUIRY SECTION
+═══════════════════════════════════ */
+        .as-inq-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 22px;
+            margin-top: 52px;
+        }
+
+        .as-inq-card {
+            background: rgba(255, 255, 255, .06);
+            border: 1px solid rgba(255, 255, 255, .12);
+            border-radius: var(--radius-lg);
+            padding: 32px 28px;
+            position: relative;
+            transition: background var(--transition-med), border-color var(--transition-med), transform var(--transition-med);
+        }
+
+        .as-inq-card:hover {
+            background: rgba(255, 255, 255, .1);
+            border-color: rgba(239, 130, 40, .28);
+            transform: translateY(-4px);
+        }
+
+        .as-inq-ico {
+            width: 52px;
+            height: 52px;
+            border-radius: var(--radius-md);
+            background: rgba(239, 130, 40, .15);
+            border: 1px solid rgba(239, 130, 40, .25);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--gold-light);
+            font-size: 1.3rem;
+            margin-bottom: 16px;
+        }
+
+        .as-inq-title {
+
+            font-size: 1.22rem;
+            font-weight: 700;
+            color: #fff;
+            margin-bottom: 7px;
+        }
+
+        .as-inq-timing {
+            display: flex;
+            align-items: center;
+            gap: 7px;
+            font-size: .79rem;
+            color: var(--gold-light);
+            font-weight: 600;
+            margin-bottom: 14px;
+        }
+
+        .as-inq-addr {
+            font-size: .83rem;
+            color: rgba(255, 255, 255, .6);
+            margin-bottom: 18px;
+            line-height: 1.55;
+        }
+
+        .as-inq-addr i {
+            color: var(--gold);
+            margin-right: 4px;
+        }
+
+        .as-inq-intro {
+            font-size: .83rem;
+            color: rgba(255, 255, 255, .58);
+            margin-bottom: 14px;
+            line-height: 1.6;
+        }
+
+        .as-topics {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+            gap: 7px;
+        }
+
+        .as-topics li {
+            display: flex;
+            align-items: center;
+            gap: 9px;
+            font-size: .84rem;
+            color: rgba(255, 255, 255, .78);
+        }
+
+        .as-topics li::before {
+            content: '';
+            width: 5px;
+            height: 5px;
+            border-radius: 50%;
+            background: var(--gold);
+            flex-shrink: 0;
+        }
+
+        /* Online links */
+        .as-link-list {
+            display: flex;
+            flex-direction: column;
+            gap: 9px;
+            margin-top: 4px;
+        }
+
+        .as-link-item {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            background: rgba(255, 255, 255, .06);
+            border: 1px solid rgba(255, 255, 255, .1);
+            border-radius: var(--radius-md);
+            padding: 11px 15px;
+            color: rgba(255, 255, 255, .84);
+            font-size: .86rem;
+            font-weight: 500;
+            text-decoration: none;
+            transition: background var(--transition-fast), border-color var(--transition-fast);
+        }
+
+        .as-link-item:hover {
+            background: rgba(255, 255, 255, .12);
+            border-color: rgba(239, 130, 40, .28);
+            color: #fff;
+        }
+
+        .as-link-ico {
+            width: 30px;
+            height: 30px;
+            border-radius: 7px;
+            background: rgba(239, 130, 40, .15);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--gold-light);
+            font-size: .8rem;
+            flex-shrink: 0;
+        }
+
+        .as-link-sub {
+            font-size: .73rem;
+            color: rgba(255, 255, 255, .42);
+        }
+
+        .as-response {
+            margin-top: 15px;
+            background: rgba(239, 130, 40, .1);
+            border: 1px solid rgba(239, 130, 40, .18);
+            border-radius: var(--radius-md);
+            padding: 11px 15px;
+            font-size: .79rem;
+            color: var(--gold-light);
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        /* ── Responsive ── */
+        @media (max-width: 992px) {
+            .as-card-grid {
+                grid-template-columns: 1fr;
+                max-width: 500px;
+            }
+
+            .as-inq-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .as-strip-sep {
+                display: none;
+            }
+
+            .as-strip .container {
+                gap: 14px;
+                justify-content: flex-start;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .as-card-grid {
+                max-width: 100%;
+            }
+
+            .as-docs-card,
+            .as-verif,
+            .as-inq-card,
+            .as-info-box {
+                padding: 20px 16px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- ─────────────────────────────────────────
+     TOP BAR
+───────────────────────────────────────── -->
+    <div class="top-bar">
+        <div class="container">
+            <div class="top-bar-content">
+                <div class="top-bar-left">
+                    <a href="tel:+917206045720" class="top-bar-item">
+                        <i class="fa fa-phone"></i><span>+91 7206045720-21,22,23,24</span>
+                    </a>
+                    <a href="mailto:info@university.edu" class="top-bar-item">
+                        <i class="fa fa-envelope"></i><span>info@university.edu</span>
+                    </a>
+                    <div class="top-bar-item">
+                        <i class="fa fa-location-dot"></i>
+                        <span>HUDA Market, Sector 37, Faridabad, Haryana</span>
+                    </div>
+                </div>
+                <div class="top-bar-right">
+                    <a href="#" class="top-social-btn"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" class="top-social-btn"><i class="fab fa-instagram"></i></a>
+                    <a href="#" class="top-social-btn"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="#" class="top-social-btn"><i class="fab fa-youtube"></i></a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ─────────────────────────────────────────
+     NAVBAR
+───────────────────────────────────────── -->
+    <div class="navbar-section" id="navbarSection">
+        <nav class="main-nav">
+            <div class="container d-flex align-items-center justify-content-between">
+                <a href="index.html" class="navbar-brand">
+                    <img src="img/logo.png" alt="JSM SR. SEC. SCHOOL" class="logo" />
+                </a>
+                <ul class="nav-center">
+                    <li><a href="index.html">Home</a></li>
+                    <li>
+                        <a href="#">About Us <i class="fa fa-chevron-down"></i></a>
+                        <div class="dropdown-menu-custom">
+                            <a href="about.html"><i class="fa fa-file-lines"></i> About</a>
+                            <a href="leadership-messages.html"><i class="fa fa-clipboard-check"></i> Leadership
+                                Messages</a>
+                            <a href="vision-mission.html"><i class="fa fa-coins"></i> Our Vision &amp; Mission</a>
+                        </div>
+                    </li>
+                    <li>
+                        <a href="#" class="active">Admission <i class="fa fa-chevron-down"></i></a>
+                        <div class="dropdown-menu-custom">
+                            <a href="admission-information.html"><i class="fa fa-file-lines"></i> Admission
+                                Information</a>
+                            <a href="#"><i class="fa fa-clipboard-check"></i> Download Registration Form</a>
+                            <a href="#"><i class="fa fa-coins"></i> Admission Process</a>
+                            <a href="admission-schedule.html"><i class="fa fa-graduation-cap"></i> Admission
+                                Schedule</a>
+                            <a href="#">Medical Information Form</a>
+                            <a href="new-register.html">Online Registration</a>
+                        </div>
+                    </li>
+                    <li>
+                        <a href="#">Academics <i class="fa fa-chevron-down"></i></a>
+                        <div class="dropdown-menu-custom">
+                            <a href="#"><i class="fa fa-book"></i> Programs</a>
+                            <a href="#"><i class="fa fa-chalkboard-user"></i> Faculty</a>
+                            <a href="#"><i class="fa fa-calendar-days"></i> Academic Calendar</a>
+                            <a href="#"><i class="fa fa-building-columns"></i> Departments</a>
+                        </div>
+                    </li>
+                    <li><a href="gallery.html">Gallery</a></li>
+                    <li><a href="blog.html">Blogs</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+                <button class="btn-apply">
+                    <i class="fa fa-paper-plane"></i><span>Apply Now</span>
+                </button>
+                <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Toggle menu">
+                    <span class="menu-icon"></span>
+                </button>
+            </div>
+        </nav>
+    </div>
+
+    <!-- ─────────────────────────────────────────
+     PAGE HERO
+───────────────────────────────────────── -->
+    <section class="page-hero">
+        <div class="page-hero-bg"></div>
+        <div class="page-hero-overlay"></div>
+        <div class="container page-hero-content">
+            <div class="page-hero-inner">
+                <div class="breadcrumb-trail" data-aos="fade-down" data-aos-duration="800">
+                    <a href="index.html"><i class="fa fa-house me-1"></i> Home</a>
+                    <span class="sep"><i class="fa fa-chevron-right" style="font-size:.6rem"></i></span>
+                    <a href="admission-information.html">Admission</a>
+                    <span class="sep"><i class="fa fa-chevron-right" style="font-size:.6rem"></i></span>
+                    <span class="current">Admission Schedule</span>
+                </div>
+                <h1 class="page-title" data-aos="fade-up" data-aos-duration="900" data-aos-delay="100">
+                    Admission Schedule
+                </h1>
+                <p class="page-subtitle" data-aos="fade-up" data-aos-duration="900" data-aos-delay="250">
+                    Online &amp; Offline — forms, timelines, step-by-step process, required documents
+                    and inquiry details all in one place.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- ─────────────────────────────────────────
+     QUICK INFO STRIP
+───────────────────────────────────────── -->
+    <div class="as-strip" data-aos="fade-down" data-aos-duration="600">
+        <div class="container">
+            <div class="as-strip-item">
+                <i class="fa fa-calendar-days"></i>
+                <span><strong>Mon – Sat</strong> &nbsp;All Working Days</span>
+            </div>
+            <div class="as-strip-sep"></div>
+            <div class="as-strip-item">
+                <i class="fa fa-clock"></i>
+                <span><strong>08:30 AM</strong> to <strong>03:30 PM</strong></span>
+            </div>
+            <div class="as-strip-sep"></div>
+            <div class="as-strip-item">
+                <i class="fa fa-location-dot"></i>
+                <span>HUDA Market, Sector 37, Faridabad, Haryana</span>
+            </div>
+            <div class="as-strip-sep"></div>
+            <div class="as-strip-item">
+                <i class="fa fa-globe"></i>
+                <span>Online &amp; Offline Modes Available</span>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- ==============================================
+     SECTION 1 — KEY SCHEDULE MILESTONES
+============================================== -->
+    <section class="as-section as-bg-white">
+        <div class="container">
+
+            <div class="row align-items-center g-5">
+                <div class="col-lg-6" data-aos="fade-right" data-aos-duration="900">
+                    <span class="as-eyebrow">Admission Schedule 2025–26</span>
+                    <h2 class="as-heading">Key Dates &amp; <em>Timelines</em></h2>
+                </div>
+                <div class="col-lg-6" data-aos="fade-left" data-aos-duration="900" data-aos-delay="150">
+                    <p class="as-body">
+                        Three critical milestones govern the admission cycle. Review each phase
+                        carefully — eligibility must be confirmed before form submission, and all
+                        formalities must be completed within the stipulated timeframe.
+                    </p>
+                </div>
+            </div>
+
+            <div class="as-card-grid">
+
+                <!-- Card 1 — Availability of Forms -->
+                <div class="as-card" data-aos="fade-up" data-aos-duration="800" data-aos-delay="100">
+                    <div class="as-card-hd">
+                        <div class="as-card-bgnum">01</div>
+                        <div class="as-card-ico"><i class="fa fa-file-lines"></i></div>
+                        <div class="as-card-title">Availability of Admission Forms</div>
+                    </div>
+                    <div class="as-card-bd">
+                        <div class="as-row">
+                            <div class="as-row-ico"><i class="fa fa-globe"></i></div>
+                            <div>
+                                <div class="as-row-lbl">Mode</div>
+                                <div class="as-row-val">Online &amp; Offline</div>
+                            </div>
+                        </div>
+                        <div class="as-row">
+                            <div class="as-row-ico"><i class="fa fa-calendar-days"></i></div>
+                            <div>
+                                <div class="as-row-lbl">Days</div>
+                                <div class="as-row-val">Monday to Saturday (All Working Days)</div>
+                            </div>
+                        </div>
+                        <div class="as-row">
+                            <div class="as-row-ico"><i class="fa fa-clock"></i></div>
+                            <div>
+                                <div class="as-row-lbl">Timings</div>
+                                <div class="as-row-val">08:30 AM to 03:30 PM</div>
+                            </div>
+                        </div>
+                        <div class="as-row">
+                            <div class="as-row-ico"><i class="fa fa-circle-info"></i></div>
+                            <div>
+                                <div class="as-row-lbl">Details</div>
+                                <div class="as-row-val">Available at campus office &amp; official website. Apply from
+                                    the comfort of your home.</div>
+                            </div>
+                        </div>
+                        <div class="as-alert as-alert-tip">
+                            <i class="fa fa-lightbulb me-1"></i>
+                            Candidates are encouraged to review eligibility criteria carefully before purchasing or
+                            submitting the form.
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 2 — Submission -->
+                <div class="as-card" data-aos="fade-up" data-aos-duration="800" data-aos-delay="220">
+                    <div class="as-card-hd">
+                        <div class="as-card-bgnum">02</div>
+                        <div class="as-card-ico"><i class="fa fa-file-pen"></i></div>
+                        <div class="as-card-title">Submission of Application Forms</div>
+                    </div>
+                    <div class="as-card-bd">
+                        <div class="as-row">
+                            <div class="as-row-ico"><i class="fa fa-building"></i></div>
+                            <div>
+                                <div class="as-row-lbl">Offline Submission</div>
+                                <div class="as-row-val">Within 3 days of form purchase</div>
+                            </div>
+                        </div>
+                        <div class="as-row">
+                            <div class="as-row-ico"><i class="fa fa-laptop"></i></div>
+                            <div>
+                                <div class="as-row-lbl">Online Submission</div>
+                                <div class="as-row-val">Within 3 days of registration</div>
+                            </div>
+                        </div>
+                        <div class="as-row">
+                            <div class="as-row-ico"><i class="fa fa-clock"></i></div>
+                            <div>
+                                <div class="as-row-lbl">Submission Timings</div>
+                                <div class="as-row-val">08:30 AM to 03:30 PM (Working Days Only)</div>
+                            </div>
+                        </div>
+                        <div class="as-row">
+                            <div class="as-row-ico"><i class="fa fa-users"></i></div>
+                            <div>
+                                <div class="as-row-lbl">Applies To</div>
+                                <div class="as-row-val">Both offline &amp; online applicants</div>
+                            </div>
+                        </div>
+                        <div class="as-alert as-alert-warn">
+                            <i class="fa fa-triangle-exclamation me-1"></i>
+                            Applications submitted after the deadline may not be accepted.
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 3 — Formalities -->
+                <div class="as-card" data-aos="fade-up" data-aos-duration="800" data-aos-delay="340">
+                    <div class="as-card-hd">
+                        <div class="as-card-bgnum">03</div>
+                        <div class="as-card-ico"><i class="fa fa-clipboard-check"></i></div>
+                        <div class="as-card-title">Completion of Admission Formalities</div>
+                    </div>
+                    <div class="as-card-bd">
+                        <div class="as-row">
+                            <div class="as-row-ico"><i class="fa fa-hourglass-half"></i></div>
+                            <div>
+                                <div class="as-row-lbl">Deadline</div>
+                                <div class="as-row-val">Within 3 days of registration</div>
+                            </div>
+                        </div>
+                        <div class="as-row">
+                            <div class="as-row-ico"><i class="fa fa-clock"></i></div>
+                            <div>
+                                <div class="as-row-lbl">Office Hours</div>
+                                <div class="as-row-val">08:30 AM to 03:30 PM</div>
+                            </div>
+                        </div>
+                        <div class="as-row">
+                            <div class="as-row-ico"><i class="fa fa-list-check"></i></div>
+                            <div>
+                                <div class="as-row-lbl">Includes</div>
+                                <div class="as-row-val">Document verification &amp; fee submission</div>
+                            </div>
+                        </div>
+                        <div class="as-row">
+                            <div class="as-row-ico"><i class="fa fa-user-check"></i></div>
+                            <div>
+                                <div class="as-row-lbl">Applies To</div>
+                                <div class="as-row-val">All newly registered applicants</div>
+                            </div>
+                        </div>
+                        <div class="as-alert as-alert-warn">
+                            <i class="fa fa-triangle-exclamation me-1"></i>
+                            Failure to complete formalities may lead to cancellation of provisional admission.
+                        </div>
+                    </div>
+                </div>
+
+            </div><!-- /.as-card-grid -->
+        </div>
+    </section>
+
+
+    <!-- ==============================================
+     SECTION 2 — OFFLINE ADMISSION PROCESS
+============================================== -->
+    <section class="as-section as-bg-grey" id="offline">
+        <div class="container">
+
+            <div class="row align-items-center g-5 mb-5">
+                <div class="col-lg-6" data-aos="fade-right" data-aos-duration="900">
+                    <span class="as-badge as-badge-off"><i class="fa fa-building me-1"></i> Offline Mode</span>
+                    <h2 class="as-heading">Offline Admission <em>Process</em></h2>
+                </div>
+                <div class="col-lg-6" data-aos="fade-left" data-aos-duration="900" data-aos-delay="150">
+                    <p class="as-body">
+                        Visit our campus during working hours to complete the offline admission.
+                        Our counselors will guide you from form collection through document
+                        verification to final confirmation.
+                    </p>
+                </div>
+            </div>
+
+            <div class="row g-4">
+
+                <!-- Steps -->
+                <div class="col-lg-6" data-aos="fade-right" data-aos-duration="900" data-aos-delay="80">
+                    <ul class="as-steps">
+                        <li class="as-step">
+                            <div class="as-step-num">1</div>
+                            <div class="as-step-body">
+                                <div class="as-step-title">Visit the Campus Office</div>
+                                <p class="as-step-desc">Come during working hours — Monday to Saturday, 08:30 AM to
+                                    03:30 PM.</p>
+                            </div>
+                        </li>
+                        <li class="as-step">
+                            <div class="as-step-num">2</div>
+                            <div class="as-step-body">
+                                <div class="as-step-title">Purchase the Admission Form</div>
+                                <p class="as-step-desc">Collect the admission form from the admission counter at campus.
+                                </p>
+                            </div>
+                        </li>
+                        <li class="as-step">
+                            <div class="as-step-num">3</div>
+                            <div class="as-step-body">
+                                <div class="as-step-title">Carefully Fill In All Required Details</div>
+                                <p class="as-step-desc">Fill all personal, academic, and contact details accurately and
+                                    legibly.</p>
+                            </div>
+                        </li>
+                        <li class="as-step">
+                            <div class="as-step-num">4</div>
+                            <div class="as-step-body">
+                                <div class="as-step-title">Attach the Necessary Documents</div>
+                                <p class="as-step-desc">Attach photocopies of all required documents as specified in the
+                                    form checklist.</p>
+                            </div>
+                        </li>
+                        <li class="as-step">
+                            <div class="as-step-num">5</div>
+                            <div class="as-step-body">
+                                <div class="as-step-title">Submit the Completed Form Within 3 Days</div>
+                                <p class="as-step-desc">Return the filled form to the admission counter within 3 days of
+                                    purchase.</p>
+                            </div>
+                        </li>
+                        <li class="as-step">
+                            <div class="as-step-num">6</div>
+                            <div class="as-step-body">
+                                <div class="as-step-title">Document Verification</div>
+                                <p class="as-step-desc">Documents will be reviewed and verified by the Admission
+                                    Department.</p>
+                            </div>
+                        </li>
+                        <li class="as-step">
+                            <div class="as-step-num">7</div>
+                            <div class="as-step-body">
+                                <div class="as-step-title">Admission Confirmation</div>
+                                <p class="as-step-desc">Upon successful verification and eligibility approval, your
+                                    admission is confirmed.</p>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Docs card + address -->
+                <div class="col-lg-6 d-flex flex-column gap-4" data-aos="fade-left" data-aos-duration="900"
+                    data-aos-delay="180">
+
+                    <div class="as-docs-card">
+                        <div class="as-docs-card-title">Documents Required</div>
+                        <div class="as-docs-card-sub">Carry photocopies of the following documents</div>
+                        <ul class="as-docs-list">
+                            <li>
+                                <span class="as-doc-dot"><i class="fa fa-image"></i></span>
+                                Passport-size photographs (recent)
+                            </li>
+                            <li>
+                                <span class="as-doc-dot"><i class="fa fa-graduation-cap"></i></span>
+                                Previous academic mark sheets &amp; certificates
+                            </li>
+                            <li>
+                                <span class="as-doc-dot"><i class="fa fa-id-card"></i></span>
+                                ID proof (Aadhar Card / Passport / Voter ID)
+                            </li>
+                            <li>
+                                <span class="as-doc-dot"><i class="fa fa-house"></i></span>
+                                Address proof
+                            </li>
+                            <li>
+                                <span class="as-doc-dot"><i class="fa fa-certificate"></i></span>
+                                Category certificate (if applicable)
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="as-info-box">
+                        <div class="as-info-lbl"><i class="fa fa-location-dot me-1"></i> Campus Address</div>
+                        <div class="as-addr-line">
+                            <i class="fa fa-map-pin"></i>
+                            HUDA Market, Sector 37, Faridabad, Haryana
+                        </div>
+                        <div class="as-addr-timing">
+                            <i class="fa fa-clock"></i>
+                            Monday – Saturday &nbsp;|&nbsp; 08:30 AM – 03:30 PM
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- ==============================================
+     SECTION 3 — ONLINE ADMISSION PROCESS
+============================================== -->
+    <section class="as-section as-bg-white" id="online">
+        <div class="container">
+
+            <div class="row align-items-center g-5 mb-5">
+                <div class="col-lg-6" data-aos="fade-right" data-aos-duration="900">
+                    <span class="as-badge as-badge-on"><i class="fa fa-globe me-1"></i> Online Mode</span>
+                    <h2 class="as-heading">Online Admission <em>Process</em></h2>
+                </div>
+                <div class="col-lg-6" data-aos="fade-left" data-aos-duration="900" data-aos-delay="150">
+                    <p class="as-body">
+                        Apply easily from anywhere through our official website. The online portal
+                        lets you complete the entire process from home — quickly, securely,
+                        and without any hassle.
+                    </p>
+                </div>
+            </div>
+
+            <div class="row g-4">
+
+                <!-- Steps -->
+                <div class="col-lg-6" data-aos="fade-right" data-aos-duration="900" data-aos-delay="80">
+                    <ul class="as-steps">
+                        <li class="as-step">
+                            <div class="as-step-num">1</div>
+                            <div class="as-step-body">
+                                <div class="as-step-title">Visit the Official Website</div>
+                                <p class="as-step-desc">Open the university's official website on any device — mobile,
+                                    tablet, or desktop.</p>
+                            </div>
+                        </li>
+                        <li class="as-step">
+                            <div class="as-step-num">2</div>
+                            <div class="as-step-body">
+                                <div class="as-step-title">Navigate to the Admissions Section</div>
+                                <p class="as-step-desc">Go to the Admissions menu and locate the current session's
+                                    application page.</p>
+                            </div>
+                        </li>
+                        <li class="as-step">
+                            <div class="as-step-num">3</div>
+                            <div class="as-step-body">
+                                <div class="as-step-title">Click on Online Registration</div>
+                                <p class="as-step-desc">Click the "Online Registration" link to begin creating your
+                                    applicant account.</p>
+                            </div>
+                        </li>
+                        <li class="as-step">
+                            <div class="as-step-num">4</div>
+                            <div class="as-step-body">
+                                <div class="as-step-title">Fill Out the Application Form</div>
+                                <p class="as-step-desc">Enter all personal, academic, and contact information accurately
+                                    in the form.</p>
+                            </div>
+                        </li>
+                        <li class="as-step">
+                            <div class="as-step-num">5</div>
+                            <div class="as-step-body">
+                                <div class="as-step-title">Upload All Required Documents</div>
+                                <p class="as-step-desc">Upload scanned copies in the specified format and file size
+                                    limit.</p>
+                            </div>
+                        </li>
+                        <li class="as-step">
+                            <div class="as-step-num">6</div>
+                            <div class="as-step-body">
+                                <div class="as-step-title">Review All Details Carefully</div>
+                                <p class="as-step-desc">Double-check all entered information and uploaded documents
+                                    before proceeding.</p>
+                            </div>
+                        </li>
+                        <li class="as-step">
+                            <div class="as-step-num">7</div>
+                            <div class="as-step-body">
+                                <div class="as-step-title">Submit the Application Form</div>
+                                <p class="as-step-desc">Click Submit — an acknowledgement will be sent to your
+                                    registered email address.</p>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Verification + Tips -->
+                <div class="col-lg-6 d-flex flex-column gap-4" data-aos="fade-left" data-aos-duration="900"
+                    data-aos-delay="180">
+
+                    <div class="as-verif">
+                        <div class="as-verif-title">
+                            <i class="fa fa-magnifying-glass-check"></i>
+                            Verification &amp; Confirmation
+                        </div>
+                        <ul class="as-verif-list">
+                            <li>
+                                <i class="fa fa-circle-check"></i>
+                                Details entered in the form will be verified against the uploaded documents by our
+                                admission team.
+                            </li>
+                            <li>
+                                <i class="fa fa-circle-check"></i>
+                                If eligible, a <strong>confirmation email</strong> will be sent within <strong>24–48
+                                    working hours</strong> of submission.
+                            </li>
+                            <li>
+                                <i class="fa fa-circle-check"></i>
+                                If the applicant does not meet eligibility criteria, an <strong>email
+                                    notification</strong> will be sent accordingly.
+                            </li>
+                            <li>
+                                <i class="fa fa-circle-check"></i>
+                                All formalities must be completed within <strong>3 days</strong> of receiving
+                                registration confirmation.
+                            </li>
+                            <li>
+                                <i class="fa fa-circle-check"></i>
+                                Keep your login credentials safe for future status tracking on the portal.
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="as-info-box">
+                        <div class="as-info-lbl"><i class="fa fa-lightbulb me-1"></i> Online Application Tips</div>
+                        <ul class="as-tips-list">
+                            <li>
+                                <span class="as-tip-ico"><i class="fa fa-file-image"></i></span>
+                                Upload documents as clear, readable scans — PDF or JPEG preferred
+                            </li>
+                            <li>
+                                <span class="as-tip-ico"><i class="fa fa-envelope"></i></span>
+                                Use a valid, active email address for all correspondence
+                            </li>
+                            <li>
+                                <span class="as-tip-ico"><i class="fa fa-wifi"></i></span>
+                                Ensure a stable internet connection while filling and submitting the form
+                            </li>
+                            <li>
+                                <span class="as-tip-ico"><i class="fa fa-floppy-disk"></i></span>
+                                Save your application number after submission for future reference
+                            </li>
+                        </ul>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- ==============================================
+     SECTION 4 — ADMISSION INQUIRY
+============================================== -->
+    <section class="p-5 as-bg-dark  " id="inquiry" style="margin-bottom: 50px;">
+        <div class="container">
+
+            <div class="row align-items-center g-5">
+                <div class="col-lg-6" data-aos="fade-right" data-aos-duration="900">
+                    <span class="as-eyebrow gold">Admission Inquiry</span>
+                    <h2 class="as-heading wh mt-2">We're Here to <em>Help You</em></h2>
+                </div>
+                <div class="col-lg-6" data-aos="fade-left" data-aos-duration="900" data-aos-delay="150">
+                    <p class="as-body wh">
+                        For any queries regarding courses, eligibility, fee structure, scholarships,
+                        or admission procedures — our admission office is ready to assist both
+                        in person and online.
+                    </p>
+                </div>
+            </div>
+
+            <div class="as-inq-grid">
+
+                <!-- Offline Inquiry -->
+                <div class="as-inq-card" data-aos="fade-up" data-aos-duration="800" data-aos-delay="100">
+                    <div class="as-inq-ico"><i class="fa fa-building-columns"></i></div>
+                    <div class="as-inq-title">Offline Inquiry</div>
+                    <div class="as-inq-timing">
+                        <i class="fa fa-clock"></i> Mon – Sat &nbsp;|&nbsp; 08:30 AM – 03:30 PM
+                    </div>
+                    <div class="as-inq-addr">
+                        <i class="fa fa-location-dot"></i>
+                        HUDA Market, Sector 37, Faridabad, Haryana
+                    </div>
+                    <p class="as-inq-intro">
+                        Visit the campus office to speak directly with our admission counselors.
+                        They will guide you on:
+                    </p>
+                    <ul class="as-topics">
+                        <li>Course selection &amp; program details</li>
+                        <li>Career opportunities after each program</li>
+                        <li>Fee details &amp; payment options</li>
+                        <li>Scholarship &amp; financial aid options</li>
+                        <li>Required documentation checklist</li>
+                    </ul>
+                </div>
+
+                <!-- Online Inquiry -->
+                <div class="as-inq-card" data-aos="fade-up" data-aos-duration="800" data-aos-delay="220">
+                    <div class="as-inq-ico"><i class="fa fa-globe"></i></div>
+                    <div class="as-inq-title">Online Inquiry</div>
+                    <div class="as-inq-timing">
+                        <i class="fa fa-circle-check"></i> Response within 24 working hours
+                    </div>
+                    <p class="as-inq-intro">
+                        Connect with us digitally through any of the following channels:
+                    </p>
+                    <div class="as-link-list">
+                        <a href="#" class="as-link-item">
+                            <div class="as-link-ico"><i class="fa fa-file-lines"></i></div>
+                            <div>
+                                <div style="font-weight:600;font-size:.87rem;">Inquiry Form</div>
+                                <div class="as-link-sub">Fill out the form on the official website</div>
+                            </div>
+                        </a>
+                        <a href="mailto:info@university.edu" class="as-link-item">
+                            <div class="as-link-ico"><i class="fa fa-envelope"></i></div>
+                            <div>
+                                <div style="font-weight:600;font-size:.87rem;">Official Email Support</div>
+                                <div class="as-link-sub">info@university.edu</div>
+                            </div>
+                        </a>
+                        <a href="tel:+917206045720" class="as-link-item">
+                            <div class="as-link-ico"><i class="fa fa-phone"></i></div>
+                            <div>
+                                <div style="font-weight:600;font-size:.87rem;">Contact Numbers</div>
+                                <div class="as-link-sub">+91 7206045720-21, 22, 23, 24</div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="as-response">
+                        <i class="fa fa-circle-info"></i>
+                        Our team typically responds within <strong>&nbsp;24 working hours</strong>.
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+
+
+
+
+    <section>
+        <div class="cta-card bg-light">
+            <img src="img/newslater-img-02.jpg" alt="Apply for Admission" class="cta-card-img" data-aos="fade-right"
+                data-aos-duration="1000" />
+            <div class="cta-card-body" data-aos="fade-left" data-aos-duration="1000" data-aos-delay="200">
+                <h2 class="cta-card-title">Apply for <span class="underline-accent">admission?</span></h2>
+                <p class="cta-card-text">
+                    A place to provide students with enough knowledge and skills in a complex world.
+                    Are you looking for an exceptional education experience? JSM SR. SEC. SCHOOL might be the place for
+                    you.
+                </p>
+                <div class="cta-email-form">
+                    <input type="email" class="cta-email-input" placeholder="Email Address..." />
+                    <button class="cta-subscribe-btn">
+                        Subscribe <i class="fa fa-arrow-up-right-from-square" style="font-size:.75rem"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <footer class="main-footer">
+            <div class="container">
+                <div class="row g-5 align-items-start">
+
+                    <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-duration="800" data-aos-delay="100">
+                        <div class="footer-col-title">About Us<span class="dot">.</span></div>
+                        <p class="footer-brand-desc">
+                            The residential semester takes place at a specially designed campus, which provides
+                            a support system that aids students in becoming confident and self-reliant.
+                        </p>
+                        <div class="footer-socials">
+                            <a href="#" class="footer-social-btn"><i class="fab fa-facebook-f"></i></a>
+                            <a href="#" class="footer-social-btn"><i class="fab fa-instagram"></i></a>
+                            <a href="#" class="footer-social-btn"><i class="fab fa-x-twitter"></i></a>
+                            <a href="#" class="footer-social-btn"><i class="fab fa-youtube"></i></a>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-2 col-md-6" data-aos="fade-up" data-aos-duration="800" data-aos-delay="200">
+                        <div class="footer-col-title">Essential<span class="dot">.</span></div>
+                        <ul class="footer-links">
+                            <li><a href="about.html">About Us</a></li>
+                            <li><a href="#">Our Team</a></li>
+                            <li><a href="#">What We Do</a></li>
+                            <li><a href="#">Pricing Plans</a></li>
+                            <li><a href="#">FAQ</a></li>
+                            <li><a href="contact.html">Contact Us</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-duration="800" data-aos-delay="300">
+                        <div class="footer-col-title">Programs<span class="dot">.</span></div>
+                        <ul class="footer-links footer-links-2col">
+                            <li><a href="#">Science</a></li>
+                            <li><a href="#">Careers</a></li>
+                            <li><a href="#">Commerce</a></li>
+                            <li><a href="#">Prototype</a></li>
+                            <li><a href="#">Arts &amp; Design</a></li>
+                            <li><a href="#">Refund Policy</a></li>
+                            <li><a href="#">Robotics</a></li>
+                            <li><a href="#">How It Works</a></li>
+                            <li><a href="#">Game Design</a></li>
+                            <li><a href="#">Fashion Dev</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-duration="800" data-aos-delay="400">
+                        <div class="footer-col-title">Get in touch<span class="dot">.</span></div>
+                        <div class="footer-contact-item">
+                            <div class="footer-contact-icon"><i class="fa fa-phone"></i></div>
+                            <div>
+                                <span class="footer-contact-value">+91 7206045720</span>
+                                <span class="footer-contact-label">Phone number</span>
+                            </div>
+                        </div>
+                        <div class="footer-contact-item">
+                            <div class="footer-contact-icon"><i class="fa fa-envelope"></i></div>
+                            <div>
+                                <span class="footer-contact-value">info@university.edu</span>
+                                <span class="footer-contact-label">Email address</span>
+                            </div>
+                        </div>
+                        <div class="footer-contact-item">
+                            <div class="footer-contact-icon"><i class="fa fa-location-dot"></i></div>
+                            <div>
+                                <span class="footer-contact-value">Sector 37, Faridabad</span>
+                                <span class="footer-contact-label">HUDA Market, Haryana</span>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="container">
+                <div class="footer-bottom">
+                    <a href="#" class="footer-bottom-brand">
+                        <div class="footer-bottom-logo"><i class="fa fa-university"></i></div>
+                        <span class="footer-bottom-name">JSM SR. SEC. SCHOOL.</span>
+                    </a>
+                    <p class="footer-copyright mb-0">
+                        Copyright &amp; Design &amp; Developed By &copy;
+                        <a href="https://brandingwaale.com/" target="_blank" class="highlight-brand">Brandingwaale
+                            Webtech</a>,
+                        All rights reserved
+                    </p>
+                </div>
+            </div>
+        </footer>
+    </section>
+
+    <!-- ─── SCRIPTS ─── -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <script src="script.js"></script>
+    <script>
+        AOS.init({ duration: 1000, once: true, offset: 100, easing: 'ease-in-out' });
+    </script>
+
+</body>
+
+</html>

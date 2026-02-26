@@ -1,0 +1,884 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Student Registration – JSM SR. SEC. SCHOOL</title>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/css/bootstrap.min.css" rel="stylesheet" />
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,800;1,400&family=Mada:wght@400;500;600;700&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="style.css">
+
+  <style>
+    .form-section {
+      padding: 80px 0 100px;
+    }
+
+    .form-container {
+
+
+      background: var(--white);
+      border-radius: 16px;
+      box-shadow: 0 20px 60px rgba(0, 0, 0, 0.12);
+      padding: 40px;
+      position: relative;
+      z-index: 2;
+    }
+
+    /* Section Headers */
+    .form-section-header {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      margin-bottom: 32px;
+      padding-bottom: 18px;
+      border-bottom: 2px solid var(--light-grey);
+    }
+
+    .form-section-icon {
+      width: 30px;
+      height: 30px;
+      border-radius: 10px;
+      background: rgba(255, 255, 255, .06);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--crimson);
+      font-size: 1.1rem;
+      flex-shrink: 0;
+    }
+
+    .form-section-title {
+      font-size: 1rem;
+      font-weight: 700;
+      color: var(--crimson);
+      line-height: 1.2;
+      margin: 0;
+    }
+
+    /* Form Groups */
+    .form-group-custom {
+      margin-bottom: 24px;
+    }
+
+    .form-label-custom {
+      font-size: 0.88rem;
+      font-weight: 600;
+      color: var(--dark);
+      margin-bottom: 8px;
+      display: block;
+    }
+
+    .form-label-custom .required {
+      color: var(--crimson);
+      margin-left: 3px;
+    }
+
+    .form-input-custom,
+    .form-select-custom,
+    .form-textarea-custom {
+      width: 100%;
+      background: var(--white);
+      border: 1.5px solid var(--border);
+      border-radius: 8px;
+      padding: 11px 14px;
+      font-size: 0.9rem;
+      font-family: 'Mada', sans-serif;
+      color: var(--dark);
+      outline: none;
+      transition: border-color 0.25s, box-shadow 0.25s;
+    }
+
+    .form-input-custom::placeholder,
+    .form-select-custom::placeholder,
+    .form-textarea-custom::placeholder {
+      color: #bbb;
+    }
+
+    .form-input-custom:focus,
+    .form-select-custom:focus,
+    .form-textarea-custom:focus {
+      border-color: var(--crimson);
+      box-shadow: 0 0 0 3px rgba(255, 255, 255, .06);
+    }
+
+    .form-textarea-custom {
+      resize: vertical;
+      min-height: 100px;
+    }
+
+    /* Two Column Grid */
+    .form-row-2col {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 20px;
+    }
+
+    /* Three Column Grid */
+    .form-row-3col {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      gap: 20px;
+    }
+
+    /* Transport Radio */
+    .transport-options {
+      display: flex;
+      gap: 16px;
+      margin-top: 8px;
+    }
+
+    .transport-option {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .transport-option input[type="radio"] {
+      width: 18px;
+      height: 18px;
+      accent-color: var(--crimson);
+      cursor: pointer;
+    }
+
+    .transport-option label {
+      font-size: 0.9rem;
+      font-weight: 500;
+      cursor: pointer;
+    }
+
+    /* Submit Section */
+    .form-submit-section {
+      margin-top: 48px;
+      padding-top: 32px;
+      border-top: 2px solid var(--light-grey);
+      text-align: center;
+    }
+
+    .btn-submit-form {
+      background: var(--crimson);
+      color: var(--white);
+      border: none;
+      padding: 16px 60px;
+      border-radius: 8px;
+      font-size: 1rem;
+      font-weight: 700;
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      gap: 12px;
+      transition: background 0.3s, transform 0.2s, box-shadow 0.3s;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .btn-submit-form::before {
+      content: '';
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      width: 0;
+      height: 0;
+      border-radius: 50%;
+      background: rgba(255, 255, 255, 0.2);
+      transform: translate(-50%, -50%);
+      transition: width 0.6s, height 0.6s;
+    }
+
+    .btn-submit-form:hover::before {
+      width: 400px;
+      height: 400px;
+    }
+
+    .btn-submit-form:hover {
+      background: var(--crimson-dark);
+      transform: translateY(-3px);
+      box-shadow: 0 8px 24px rgba(192, 22, 44, 0.3);
+    }
+
+    .btn-submit-form:active {
+      transform: translateY(-1px);
+    }
+
+    .btn-submit-form span {
+      position: relative;
+      z-index: 1;
+    }
+
+    .btn-submit-form i {
+      position: relative;
+      z-index: 1;
+    }
+
+    .form-note {
+      margin-top: 20px;
+      font-size: 0.85rem;
+      color: var(--mid-grey);
+      max-width: 500px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .form-note .required {
+      color: var(--crimson);
+      font-weight: 600;
+    }
+
+    /* Helper Text */
+    .form-helper-text {
+      font-size: 0.8rem;
+      color: var(--mid-grey);
+      margin-top: 5px;
+      display: flex;
+      align-items: center;
+      gap: 5px;
+    }
+
+    .form-helper-text i {
+      font-size: 0.75rem;
+      color: var(--gold);
+    }
+
+    /* Spacer */
+    .section-spacer {
+      height: 20px;
+    }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+      .form-container {
+        padding: 36px 28px 44px;
+        margin: -40px 20px 0;
+      }
+
+      .form-row-2col,
+      .form-row-3col {
+        grid-template-columns: 1fr;
+        gap: 16px;
+      }
+
+      .form-section-header {
+
+        align-items: flex-start;
+        gap: 10px;
+      }
+
+      .page-header {
+        padding: 50px 0 70px;
+      }
+
+      .btn-submit-form {
+        width: 100%;
+        justify-content: center;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .form-container {
+        padding: 28px 20px 36px;
+      }
+
+      .gender-options {
+        flex-direction: column;
+        gap: 12px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+
+  <div class="nav">
+    <div class="top-bar">
+      <div class="container">
+        <div class="top-bar-content">
+          <div class="top-bar-left">
+            <a href="tel:+917206045720" class="top-bar-item">
+              <i class="fa fa-phone"></i>
+              <span>+91 7206045720-21,22,23,24</span>
+            </a>
+            <a href="mailto:info@university.edu" class="top-bar-item">
+              <i class="fa fa-envelope"></i>
+              <span>info@university.edu</span>
+            </a>
+            <div class="top-bar-item">
+              <i class="fa fa-location-dot"></i>
+              <span>Campus Address, City</span>
+            </div>
+          </div>
+          <div class="top-bar-right">
+            <a href="#" class="top-social-btn"><i class="fab fa-facebook-f"></i></a>
+            <a href="#" class="top-social-btn"><i class="fab fa-instagram"></i></a>
+            <a href="#" class="top-social-btn"><i class="fab fa-linkedin-in"></i></a>
+            <a href="#" class="top-social-btn"><i class="fab fa-youtube"></i></a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="navbar-section" id="navbarSection">
+      <nav class="main-nav">
+        <div class="container d-flex align-items-center justify-content-between">
+
+          <!-- Logo (Left) -->
+          <a href="#" class="navbar-brand">
+            <img src="/img/logo.png" alt="Logo" class="logo" />
+          </a>
+
+          <!-- Nav Links (Center) -->
+          <ul class="nav-center">
+            <li><a href="index.html" class="active">Home</a></li>
+            <li>
+              <a href="#">
+                About us <i class="fa fa-chevron-down"></i>
+              </a>
+              <div class="dropdown-menu-custom">
+                <a href="about.html"> About</a>
+                <a href="vision-mission.html"> Our Vision & Mission
+                </a>
+                <a href="chairman-message.html"> Chairman Message
+                </a>
+
+                <a href="principal-message.html"> Principal Message
+                </a>
+
+
+              </div>
+            </li>
+
+            <!-- Dropdown: Admission -->
+            <li>
+              <a href="#">
+                Admission <i class="fa fa-chevron-down"></i>
+              </a>
+              <div class="dropdown-menu-custom">
+                <a href="admission-information.html"> Admission
+                  Information</a>
+                <a href="#"> Download Registration
+                  Form</a>
+                <a href="admission-process.html">Admission Process</a>
+                <a href=""> Admission Schedule</a>
+                <a href="#"> Medical Information
+                  Form
+                </a>
+                <a href="new-register.html"> Online Registration</a>
+              </div>
+            </li>
+
+
+            <li>
+              <a href="#">
+
+                Our Campus <i class="fa fa-chevron-down"></i>
+              </a>
+              <div class="dropdown-menu-custom">
+                <a href="campus.html">Campus</a>
+                <a href="language-lab.html">Language Lab</a>
+                <a href="medical-room.html">Medical Room</a>
+                <a href="science-lab.html">Science Lab</a>
+                <a href="smart-classes.html">Smart Classes</a>
+                <a href="school-library.html">School Library</a>
+                <a href="school-transport.html">School Transport</a>
+                <a href="counselling-area.html">Counselling Area</a>
+                <a href="ongoing-classes.html">Ongoing Classes</a>
+                <a href="house-system.html">House System</a>
+              </div>
+            </li>
+
+            <!-- Dropdown: Academics -->
+            <li>
+              <a href="#">
+                Academics <i class="fa fa-chevron-down"></i>
+              </a>
+              <div class="dropdown-menu-custom">
+                <a href="#">Programs</a>
+                <a href="#"> Faculty</a>
+                <a href="#">Academic Calendar</a>
+                <a href="#">Departments</a>
+              </div>
+            </li>
+
+            <li>
+              <a href="#">
+
+                Gallery <i class="fa fa-chevron-down"></i>
+              </a>
+              <div class="dropdown-menu-custom">
+
+                <a href="photo-gallery.html"> Photo Gallery</a>
+                <a href="video-gallery.html"> Video Gallery</a>
+                <a href="events-and-celebrations">Events and celebrations </a>
+              </div>
+            </li>
+            <li><a href="blog.html">Blogs</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+
+          <!-- Apply Now Button (RiFVght) -->
+          <button class="btn-apply">
+            <i class="fa fa-paper-plane"></i>
+            <span>Apply Now</span>
+          </button>
+
+          <!-- Mobile Menu Button -->
+          <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Toggle menu">
+            <span class="menu-icon"></span>
+          </button>
+
+        </div>
+      </nav>
+    </div>
+  </div>
+
+
+  <section class="page-hero">
+    <div class="page-hero-bg"></div>
+    <div class="page-hero-overlay"></div>
+    <div class="container page-hero-content">
+      <div class="page-hero-inner">
+        <!-- Breadcrumb -->
+        <div class="breadcrumb-trail" data-aos="fade-down" data-aos-duration="800">
+          <a href="JSM SR. SEC. SCHOOL-university.html"><i class="fa fa-house me-1"></i> Home</a>
+          <span class="sep"><i class="fa fa-chevron-right" style="font-size:0.6rem;"></i></span>
+          <span class="current"> Application Form for Registration</span>
+        </div>
+        <h1 class="page-title" data-aos="fade-up" data-aos-duration="900" data-aos-delay="100"> Application Form for
+          Registration</h1>
+        <p class="page-subtitle" data-aos="fade-up" data-aos-duration="900" data-aos-delay="250">
+          Please fill out all required fields carefully. Our admissions team will review your application and contact
+          you within 48 hours.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ REGISTRATION FORM ═══ -->
+  <div class="form-section">
+    <div class="container">
+      <div class="form-container">
+        <form id="registrationForm">
+
+          <!-- ═══ CHILD'S INFORMATION ═══ -->
+          <div class="form-section-header">
+            <div class="form-section-icon">
+              <i class="fa fa-child"></i>
+            </div>
+            <h2 class="form-section-title">Child's Information</h2>
+          </div>
+
+          <div class="form-row-2col">
+            <div class="form-group-custom">
+              <label class="form-label-custom">Child's Name <span class="required">*</span></label>
+              <input type="text" class="form-input-custom" placeholder="Enter full name" required />
+            </div>
+            <div class="form-group-custom">
+              <label class="form-label-custom">Place of Birth <span class="required">*</span></label>
+              <input type="text" class="form-input-custom" placeholder="Enter place of birth" required />
+            </div>
+          </div>
+
+          <div class="form-row-3col">
+            <div class="form-group-custom">
+              <label class="form-label-custom">Date of Birth <span class="required">*</span></label>
+              <input type="date" class="form-input-custom" required />
+            </div>
+            <div class="form-group-custom">
+              <label class="form-label-custom">Mother Tongue <span class="required">*</span></label>
+              <input type="text" class="form-input-custom" placeholder="Enter mother tongue" required />
+            </div>
+            <div class="form-group-custom">
+              <label class="form-label-custom">Gender <span class="required">*</span></label>
+              <select class="form-select-custom" required>
+                <option value="">Select gender</option>
+                <option value="male">Male</option>
+                <option value="female">Female</option>
+                <option value="other">Other</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="form-row-2col">
+            <div class="form-group-custom">
+              <label class="form-label-custom">Nationality <span class="required">*</span></label>
+              <input type="text" class="form-input-custom" placeholder="Enter nationality" required />
+            </div>
+            <div class="form-group-custom">
+              <label class="form-label-custom">Religion</label>
+              <input type="text" class="form-input-custom" placeholder="Enter religion" />
+            </div>
+          </div>
+
+          <div class="section-spacer"></div>
+
+          <!-- ═══ CONTACT INFORMATION ═══ -->
+          <div class="form-section-header">
+            <div class="form-section-icon">
+              <i class="fa fa-address-card"></i>
+            </div>
+            <h2 class="form-section-title">Contact Information (Residential)</h2>
+          </div>
+
+          <div class="form-row-2col">
+            <div class="form-group-custom">
+              <label class="form-label-custom">Curriculum / Board <span class="required">*</span></label>
+              <select class="form-select-custom" required>
+                <option value="">Select curriculum</option>
+                <option value="cbse">CBSE</option>
+                <option value="icse">ICSE</option>
+                <option value="ib">IB</option>
+                <option value="state">State Board</option>
+                <option value="other">Other</option>
+              </select>
+            </div>
+            <div class="form-group-custom">
+              <label class="form-label-custom">Phone No <span class="required">*</span></label>
+              <input type="tel" class="form-input-custom" placeholder="Enter phone number" required />
+            </div>
+          </div>
+
+          <div class="form-group-custom">
+            <label class="form-label-custom">Residential Address <span class="required">*</span></label>
+            <input type="text" class="form-input-custom" placeholder="House no., Street name" required />
+          </div>
+
+          <div class="form-row-2col">
+            <div class="form-group-custom">
+              <label class="form-label-custom">Landmark</label>
+              <input type="text" class="form-input-custom" placeholder="Nearby landmark" />
+            </div>
+            <div class="form-group-custom">
+              <label class="form-label-custom">State <span class="required">*</span></label>
+              <input type="text" class="form-input-custom" placeholder="Enter state" required />
+            </div>
+          </div>
+
+          <div class="form-group-custom">
+            <label class="form-label-custom">Zip Code <span class="required">*</span></label>
+            <input type="text" class="form-input-custom" placeholder="Enter zip code" maxlength="6" required />
+          </div>
+
+          <div class="section-spacer"></div>
+
+          <!-- ═══ LAST SCHOOL DETAILS ═══ -->
+          <div class="form-section-header">
+            <div class="form-section-icon">
+              <i class="fa fa-school"></i>
+            </div>
+            <h2 class="form-section-title">Details of Last School Attended</h2>
+          </div>
+
+          <div class="form-row-2col">
+            <div class="form-group-custom">
+              <label class="form-label-custom">Name of Last School <span class="required">*</span></label>
+              <input type="text" class="form-input-custom" placeholder="Enter school name" required />
+            </div>
+            <div class="form-group-custom">
+              <label class="form-label-custom">Seeking Admission <span class="required">*</span></label>
+              <select class="form-select-custom" required>
+                <option value="">Select class</option>
+                <option value="nursery">Nursery</option>
+                <option value="lkg">LKG</option>
+                <option value="ukg">UKG</option>
+                <option value="1">Class 1</option>
+                <option value="2">Class 2</option>
+                <option value="3">Class 3</option>
+                <option value="4">Class 4</option>
+                <option value="5">Class 5</option>
+                <option value="6">Class 6</option>
+                <option value="7">Class 7</option>
+                <option value="8">Class 8</option>
+                <option value="9">Class 9</option>
+                <option value="10">Class 10</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="form-group-custom">
+            <label class="form-label-custom">Reason of Change</label>
+            <textarea class="form-textarea-custom"
+              placeholder="Please briefly explain reason for changing school..."></textarea>
+          </div>
+
+          <div class="form-row-2col">
+            <div class="form-group-custom">
+              <label class="form-label-custom">School City <span class="required">*</span></label>
+              <input type="text" class="form-input-custom" placeholder="Enter city" required />
+            </div>
+            <div class="form-group-custom">
+              <label class="form-label-custom">School State <span class="required">*</span></label>
+              <input type="text" class="form-input-custom" placeholder="Enter state" required />
+            </div>
+          </div>
+
+          <div class="form-group-custom">
+            <label class="form-label-custom">Zip Code <span class="required">*</span></label>
+            <input type="text" class="form-input-custom" placeholder="Enter zip code" maxlength="6" required />
+          </div>
+
+          <div class="section-spacer"></div>
+
+          <!-- ═══ PARENT/GUARDIAN INFORMATION ═══ -->
+          <div class="form-section-header">
+            <div class="form-section-icon">
+              <i class="fa fa-user-tie"></i>
+            </div>
+            <h2 class="form-section-title">Particulars for Father/Mother/Guardian #1</h2>
+          </div>
+
+          <div class="form-row-2col">
+            <div class="form-group-custom">
+              <label class="form-label-custom">Your Name <span class="required">*</span></label>
+              <input type="text" class="form-input-custom" placeholder="Enter full name" required />
+            </div>
+            <div class="form-group-custom">
+              <label class="form-label-custom">Your Date of Birth <span class="required">*</span></label>
+              <input type="date" class="form-input-custom" required />
+            </div>
+          </div>
+
+          <div class="form-row-2col">
+            <div class="form-group-custom">
+              <label class="form-label-custom">Qualification <span class="required">*</span></label>
+              <input type="text" class="form-input-custom" placeholder="Enter highest qualification" required />
+            </div>
+            <div class="form-group-custom">
+              <label class="form-label-custom">Occupation <span class="required">*</span></label>
+              <input type="text" class="form-input-custom" placeholder="Enter occupation" required />
+            </div>
+          </div>
+
+          <div class="form-row-2col">
+            <div class="form-group-custom">
+              <label class="form-label-custom">Mobile <span class="required">*</span></label>
+              <input type="tel" class="form-input-custom" placeholder="Enter mobile number" required />
+            </div>
+            <div class="form-group-custom">
+              <label class="form-label-custom">Email <span class="required">*</span></label>
+              <input type="email" class="form-input-custom" placeholder="Enter email address" required />
+            </div>
+          </div>
+
+          <div class="section-spacer"></div>
+
+          <!-- ═══ REQUIREMENTS ═══ -->
+          <div class="form-section-header">
+            <div class="form-section-icon">
+              <i class="fa fa-bus"></i>
+            </div>
+            <h2 class="form-section-title">Requirements</h2>
+          </div>
+
+          <div class="form-group-custom">
+            <label class="form-label-custom">Do you require transport service facility for your child? <span
+                class="required">*</span></label>
+            <div class="transport-options">
+              <div class="transport-option">
+                <input type="radio" name="transport" id="transportYes" value="yes" required />
+                <label for="transportYes">Yes, I need transport</label>
+              </div>
+              <div class="transport-option">
+                <input type="radio" name="transport" id="transportNo" value="no" required />
+                <label for="transportNo">No, I don't need transport</label>
+              </div>
+            </div>
+            <div class="form-helper-text">
+              <i class="fa fa-info-circle"></i>
+              Transport charges will be communicated separately based on route
+            </div>
+          </div>
+
+          <!-- ═══ SUBMIT SECTION ═══ -->
+          <div class="form-submit-section">
+            <button type="submit" class="btn-submit-form">
+              <span>Submit Application</span>
+              <i class="fa fa-paper-plane"></i>
+            </button>
+            <p class="form-note">
+              <span class="required">*</span> All fields marked with asterisk are mandatory.
+              Please ensure all information is accurate before submission.
+            </p>
+          </div>
+
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <section>
+    <div class="cta-card bg-light">
+      <img src="img/Classroom.jpeg" alt="Apply for Admission" class="cta-card-img" data-aos="fade-right"
+        data-aos-duration="1000" />
+      <div class="cta-card-body" data-aos="fade-left" data-aos-duration="1000" data-aos-delay="200">
+        <h2 class="cta-card-title">Apply for <span class="underline-accent">admission?</span></h2>
+        <p class="cta-card-text">
+          A place to provide students with enough knowledge and skills in a
+          complex world. Are you looking for exceptional education experience?
+          JSM SR. SEC. SCHOOL might be the place for you.
+        </p>
+        <div class="cta-email-form">
+          <input type="email" class="cta-email-input" placeholder="Email Address..." />
+          <button class="cta-subscribe-btn">
+            Subscribe <i class="fa fa-arrow-up-right-from-square" style="font-size:0.75rem;"></i>
+          </button>
+        </div>
+      </div>
+    </div>
+
+
+    <!-- Main Footer -->
+    <footer class="main-footer">
+      <div class="container ">
+        <div class="row g-5   align-items-start">
+
+          <!-- About -->
+          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-duration="800" data-aos-delay="100">
+            <div class="footer-col-title">About Us<span class="dot">.</span></div>
+            <p class="footer-brand-desc">
+              The residential semester takes place at a specially designed campus,
+              which provides a support system that aids students in becoming
+              confident and self-reliant.
+            </p>
+            <div class="footer-socials">
+              <a href="#" class="footer-social-btn"><i class="fab fa-facebook-f"></i></a>
+              <a href="#" class="footer-social-btn"><i class="fab fa-instagram"></i></a>
+              <a href="#" class="footer-social-btn"><i class="fab fa-x-twitter"></i></a>
+              <a href="#" class="footer-social-btn"><i class="fab fa-youtube"></i></a>
+            </div>
+          </div>
+
+          <!-- Essential -->
+          <div class="col-lg-2 col-md-6" data-aos="fade-up" data-aos-duration="800" data-aos-delay="200">
+            <div class="footer-col-title">Essential<span class="dot">.</span></div>
+            <ul class="footer-links">
+              <li><a href="about.html">About Us</a></li>
+              <li><a href="#">Our Team</a></li>
+              <li><a href="#">What We Do</a></li>
+              <li><a href="#">Pricing Plans</a></li>
+              <li><a href="#">FAQ</a></li>
+              <li><a href="#">Contact Us</a></li>
+            </ul>
+          </div>
+
+          <!-- Programs -->
+          <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-duration="800" data-aos-delay="300">
+            <div class="footer-col-title">Programs<span class="dot">.</span></div>
+            <ul class="footer-links footer-links-2col">
+              <li><a href="#">Science</a></li>
+              <li><a href="#">Careers</a></li>
+              <li><a href="#">Commerce</a></li>
+              <li><a href="#">Prototype</a></li>
+              <li><a href="#">Arts &amp; Design</a></li>
+              <li><a href="#">Refund Policy</a></li>
+              <li><a href="#">Robotics</a></li>
+              <li><a href="#">How It Works</a></li>
+              <li><a href="#">Game Design</a></li>
+              <li><a href="#">Fashion Dev</a></li>
+            </ul>
+          </div>
+
+          <!-- Get in Touch -->
+          <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-duration="800" data-aos-delay="400">
+            <div class="footer-col-title">Get in touch<span class="dot">.</span></div>
+
+            <div class="footer-contact-item">
+              <div class="footer-contact-icon"><i class="fa fa-phone"></i></div>
+              <div>
+                <span class="footer-contact-value">+1 (444) 000-8888</span>
+                <span class="footer-contact-label">Phone number</span>
+              </div>
+            </div>
+
+            <div class="footer-contact-item">
+              <div class="footer-contact-icon"><i class="fa fa-envelope"></i></div>
+              <div>
+                <span class="footer-contact-value">info@JSM SR. SEC. SCHOOL.edu</span>
+                <span class="footer-contact-label">Email address</span>
+              </div>
+            </div>
+
+            <div class="footer-contact-item">
+              <div class="footer-contact-icon"><i class="fa fa-location-dot"></i></div>
+              <div>
+                <span class="footer-contact-value">New York, US</span>
+                <span class="footer-contact-label">12/A, New Booston Tower</span>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- Bottom Bar -->
+      <div class="container">
+        <div class="footer-bottom">
+          <a href="#" class="footer-bottom-brand">
+            <div class="footer-bottom-logo"><i class="fa fa-university"></i></div>
+            <span class="footer-bottom-name">JSM SR. SEC. SCHOOL.</span>
+          </a>
+          <p class="footer-copyright mb-0">
+            Copyright & Design & Developed By &copy;
+            <a href="https://brandingwaale.com/" target="_blank" class="highlight-brand">
+              Brandingwaale Webtech
+            </a>,
+            All rights reserved
+          </p>
+
+        </div>
+      </div>
+    </footer>
+  </section>
+
+
+  <script>
+    // Form submission handler
+    document.getElementById('registrationForm').addEventListener('submit', function (e) {
+      e.preventDefault();
+
+      // Collect form data
+      const formData = new FormData(this);
+
+      // Show loading state
+      const submitBtn = this.querySelector('.btn-submit-form');
+      const originalText = submitBtn.innerHTML;
+      submitBtn.innerHTML = '<span>Submitting...</span> <i class="fa fa-spinner fa-spin"></i>';
+      submitBtn.disabled = true;
+
+      // Simulate form submission
+      setTimeout(() => {
+        submitBtn.innerHTML = '<span>Submitted Successfully!</span> <i class="fa fa-check"></i>';
+        submitBtn.style.background = '#22c55e';
+
+        // Reset after 3 seconds
+        setTimeout(() => {
+          this.reset();
+          submitBtn.innerHTML = originalText;
+          submitBtn.style.background = '';
+          submitBtn.disabled = false;
+          alert('Thank you! Your application has been submitted successfully. Our team will contact you within 48 hours.');
+        }, 3000);
+      }, 2000);
+    });
+
+    // Real-time validation feedback
+    document.querySelectorAll('.form-input-custom, .form-select-custom, .form-textarea-custom').forEach(input => {
+      input.addEventListener('blur', function () {
+        if (this.hasAttribute('required') && !this.value.trim()) {
+          this.style.borderColor = 'var(--crimson)';
+        } else {
+          this.style.borderColor = '';
+        }
+      });
+
+      input.addEventListener('input', function () {
+        if (this.style.borderColor === 'rgb(192, 22, 44)') {
+          this.style.borderColor = '';
+        }
+      });
+    });
+  </script>
+</body>
+
+</html>

@@ -1,0 +1,671 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Blog Details – JSM SR. SEC. SCHOOL</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,800;1,400&family=Source+Sans+3:wght@300;400;600&display=swap"
+        rel="stylesheet" />
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="stylesheet" href="blog.css">
+
+</head>
+
+<body>
+
+    <div class="nav">
+        <!-- Top Bar -->
+        <div class="top-bar">
+            <div class="container">
+                <div class="top-bar-content">
+                    <div class="top-bar-left">
+                        <a href="tel:+917206045720" class="top-bar-item">
+                            <i class="fa fa-phone"></i>
+                            <span>+91 7206045720-21,22,23,24</span>
+                        </a>
+                        <a href="mailto:info@university.edu" class="top-bar-item">
+                            <i class="fa fa-envelope"></i>
+                            <span>info@university.edu</span>
+                        </a>
+                        <div class="top-bar-item">
+                            <i class="fa fa-location-dot"></i>
+                            <span>Campus Address, City</span>
+                        </div>
+                    </div>
+                    <div class="top-bar-right">
+                        <a href="#" class="top-social-btn"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="top-social-btn"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="top-social-btn"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#" class="top-social-btn"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Main Navbar -->
+        <div class="navbar-section" id="navbarSection">
+            <nav class="main-nav">
+                <div class="container d-flex align-items-center justify-content-between">
+                    <!-- Logo (Left) -->
+                    <a href="index.html" class="navbar-brand">
+                        <img src="img/logo.png" alt="Logo" class="logo" />
+                    </a>
+
+                    <!-- Nav Links (Center) -->
+                    <ul class="nav-center">
+                        <li><a href="index.html" class="active">Home</a></li>
+
+                        <!-- About us Dropdown -->
+                        <li>
+                            <a href="#"> About us <i class="fa fa-chevron-down"></i> </a>
+                            <div class="dropdown-menu-custom">
+                                <a href="about.html">About</a>
+                                <a href="vision-mission.html">Our Vision & Mission</a>
+                                <a href="chairman-message.html">Chairman Message</a>
+                                <a href="principal-message.html">Principal Message</a>
+                            </div>
+                        </li>
+
+                        <!-- Admission Dropdown -->
+                        <li>
+                            <a href="#"> Admission <i class="fa fa-chevron-down"></i> </a>
+                            <div class="dropdown-menu-custom">
+                                <a href="admission-information.html">Admission Information</a>
+                                <a href="#">Download Registration Form</a>
+                                <a href="admission-process.html">Admission Process</a>
+                                <a href="#">Admission Schedule</a>
+                                <a href="#">Medical Information Form</a>
+                                <a href="new-register.html">Online Registration</a>
+                            </div>
+                        </li>
+
+                        <!-- Our Campus Dropdown -->
+                        <li>
+                            <a href="#"> Our Campus <i class="fa fa-chevron-down"></i> </a>
+                            <div class="dropdown-menu-custom">
+                                <a href="campus.html">Campus</a>
+                                <a href="language-lab.html">Language Lab</a>
+                                <a href="medical-room.html">Medical Room</a>
+                                <a href="science-lab.html">Science Lab</a>
+                                <a href="smart-classes.html">Smart Classes</a>
+                                <a href="school-library.html">School Library</a>
+                                <a href="school-transport.html">School Transport</a>
+                                <a href="counselling-area.html">Counselling Area</a>
+                                <a href="ongoing-classes.html">Ongoing Classes</a>
+                                <a href="house-system.html">House System</a>
+                            </div>
+                        </li>
+
+                        <!-- Academics Dropdown -->
+                        <li>
+                            <a href="#"> Academics <i class="fa fa-chevron-down"></i> </a>
+                            <div class="dropdown-menu-custom">
+                                <a href="#">Programs</a>
+                                <a href="#">Faculty</a>
+                                <a href="#">Academic Calendar</a>
+                                <a href="#">Departments</a>
+                            </div>
+                        </li>
+
+                        <!-- Gallery Dropdown -->
+                        <li>
+                            <a href="#"> Gallery <i class="fa fa-chevron-down"></i> </a>
+                            <div class="dropdown-menu-custom">
+                                <a href="photo-gallery.html">Photo Gallery</a>
+                                <a href="video-gallery.html">Video Gallery</a>
+                                <a href="events-and-celebrations.html">Events and Celebrations</a>
+                            </div>
+                        </li>
+
+                        <li><a href="blog.html">Blogs</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+
+                    <!-- Apply Now Button (Right) -->
+                    <div class="d-none d-lg-inline">
+                        <button class="btn-apply">
+                            <i class="fa fa-paper-plane"></i>
+                            <span>Apply Now</span>
+                        </button>
+                    </div>
+                    <!-- Mobile Menu Button -->
+                    <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Toggle menu">
+                        <span class="menu-icon"></span>
+                    </button>
+                </div>
+            </nav>
+        </div>
+    </div>
+
+    <!-- ═══ MOBILE NAV OVERLAY ═══ -->
+    <div class="mobile-nav-overlay" id="mobileOverlay"></div>
+
+    <!-- ═══ MOBILE NAV PANEL ═══ -->
+    <div class="mobile-nav" id="mobileNav">
+        <div class="mobile-nav-header">
+            <a href="index.html" class="navbar-brand">
+                <img src="img/logo.png" alt="Logo" class="logo" />
+            </a>
+
+            <button class="mobile-nav-close" id="mobileNavClose">
+                <i class="fa fa-times"></i>
+            </button>
+        </div>
+
+        <div class="mobile-nav-body">
+            <ul class="mobile-nav-links">
+                <li><a href="index.html" class="active">Home</a></li>
+
+                <!-- About us Mobile Dropdown -->
+                <li>
+                    <a href="#" class="mobile-dropdown-toggle">
+                        About us <i class="fa fa-chevron-down"></i>
+                    </a>
+                    <div class="mobile-dropdown">
+                        <a href="about.html">About</a>
+                        <a href="vision-mission.html">Our Vision & Mission</a>
+                        <a href="chairman-message.html">Chairman Message</a>
+                        <a href="principal-message.html">Principal Message</a>
+                    </div>
+                </li>
+
+                <!-- Admission Mobile Dropdown -->
+                <li>
+                    <a href="#" class="mobile-dropdown-toggle">
+                        Admission <i class="fa fa-chevron-down"></i>
+                    </a>
+                    <div class="mobile-dropdown">
+                        <a href="admission-information.html">Admission Information</a>
+                        <a href="#">Download Registration Form</a>
+                        <a href="admission-process.html">Admission Process</a>
+                        <a href="#">Admission Schedule</a>
+                        <a href="#">Medical Information Form</a>
+                        <a href="new-register.html">Online Registration</a>
+                    </div>
+                </li>
+
+                <!-- Our Campus Mobile Dropdown -->
+                <li>
+                    <a href="#" class="mobile-dropdown-toggle">
+                        Our Campus <i class="fa fa-chevron-down"></i>
+                    </a>
+                    <div class="mobile-dropdown">
+                        <a href="campus.html">Campus</a>
+                        <a href="language-lab.html">Language Lab</a>
+                        <a href="medical-room.html">Medical Room</a>
+                        <a href="science-lab.html">Science Lab</a>
+                        <a href="smart-classes.html">Smart Classes</a>
+                        <a href="school-library.html">School Library</a>
+                        <a href="school-transport.html">School Transport</a>
+                        <a href="counselling-area.html">Counselling Area</a>
+                        <a href="ongoing-classes.html">Ongoing Classes</a>
+                        <a href="house-system.html">House System</a>
+                    </div>
+                </li>
+
+                <!-- Academics Mobile Dropdown -->
+                <li>
+                    <a href="#" class="mobile-dropdown-toggle">
+                        Academics <i class="fa fa-chevron-down"></i>
+                    </a>
+                    <div class="mobile-dropdown">
+                        <a href="#">Programs</a>
+                        <a href="#">Faculty</a>
+                        <a href="#">Academic Calendar</a>
+                        <a href="#">Departments</a>
+                    </div>
+                </li>
+
+                <!-- Gallery Mobile Dropdown -->
+                <li>
+                    <a href="#" class="mobile-dropdown-toggle">
+                        Gallery <i class="fa fa-chevron-down"></i>
+                    </a>
+                    <div class="mobile-dropdown">
+                        <a href="photo-gallery.html">Photo Gallery</a>
+                        <a href="video-gallery.html">Video Gallery</a>
+                        <a href="events-and-celebrations.html">Events and Celebrations</a>
+                    </div>
+                </li>
+
+                <li><a href="blog.html">Blogs</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </div>
+
+        <div class="mobile-nav-footer">
+            <a href="new-register.html" class="mobile-nav-cta">
+                <i class="fa fa-paper-plane"></i> Apply Now
+            </a>
+        </div>
+    </div>
+
+    <section class="page-hero">
+        <div class="page-hero-bg"></div>
+        <div class="page-hero-overlay"></div>
+        <div class="container page-hero-content">
+            <div class="page-hero-inner">
+                <div class="breadcrumb-trail">
+                    <a href="JSM SR. SEC. SCHOOL-university.html"><i class="fa fa-house me-1"></i> Home</a>
+                    <span class="sep"><i class="fa fa-chevron-right" style="font-size:0.6rem;"></i></span>
+                    <span class="current">Blog &amp; News</span>
+                </div>
+                <h1 class="page-title">Blog &amp; News</h1>
+                <p class="page-subtitle">
+                    Stay informed with the latest stories, research breakthroughs,
+                    campus events, and academic insights from JSM SR. SEC. SCHOOL.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- ─── MAIN CONTENT ─── -->
+    <div class="container">
+        <div class="post-layout" id="articleTop">
+
+            <!-- Article Body -->
+            <article class="article-body">
+
+                <!-- Article content -->
+                <div class="article-content" id="articleContent">
+                    <h1>The new technology, developed over five years</h1>
+                    <p>In a landmark development for clean energy, researchers at JSM SR. SEC. SCHOOL's Department of
+                        Applied Sciences have unveiled a revolutionary battery storage technology that promises to
+                        significantly reduce the cost and improve the efficiency of renewable energy systems worldwide.
+                        The breakthrough was announced at the International Energy Innovation Summit held on our campus
+                        last week.</p>
+
+                    <p>The new technology, developed over five years of intensive research, centers on a novel electrode
+                        material derived from sustainable bio-based compounds. Unlike conventional lithium-ion
+                        batteries, this next-generation system operates using abundant and environmentally benign
+                        materials, dramatically lowering both manufacturing costs and environmental impact.</p>
+
+                    <h2 id="section1">The Science Behind the Breakthrough</h2>
+
+                    <p>At the heart of this innovation is a redox-active polymer compound that acts as both anode and
+                        cathode material. The team discovered that by engineering the molecular architecture of this
+                        compound at the nanoscale, they could achieve unprecedented charge-discharge cycle stability —
+                        retaining over 95% capacity after 10,000 cycles under laboratory conditions.</p>
+
+                    <div class="article-blockquote">
+                        <p>"This is not an incremental improvement — it is a paradigm shift. We are looking at a
+                            technology that could make grid-scale renewable storage economically viable within this
+                            decade."</p>
+                        <cite>— Dr. James Carter, Head of Research, Department of Sciences</cite>
+                    </div>
+
+                    <p>The research team comprised 24 graduate students, 8 postdoctoral researchers, and faculty members
+                        from both the Chemistry and Electrical Engineering departments. Their interdisciplinary
+                        collaboration is being hailed as a model for how universities can drive applied innovation.</p>
+
+                    <div class="article-img-wrap">
+                        <img src="https://images.unsplash.com/photo-1518770660439-4636190af475?q=80&w=1200&auto=format&fit=crop"
+                            alt="Research lab" class="article-img" />
+                        <div class="article-img-caption">The JSM SR. SEC. SCHOOL Advanced Materials Lab where the
+                            breakthrough was
+                            achieved — February 2025</div>
+                    </div>
+
+                    <h2 id="section2">Key Technical Achievements</h2>
+
+                    <div class="key-points">
+                        <div class="key-points-title"><i class="fa fa-circle-check"></i> Summary of Key Findings</div>
+                        <ul>
+                            <li>Energy density improved by 340% compared to current commercial lithium-ion batteries of
+                                similar form factor</li>
+                            <li>Manufacturing cost reduced by an estimated 60% using readily available organic
+                                precursors</li>
+                            <li>Full charge achieved in under 12 minutes with proprietary fast-charging protocol</li>
+                            <li>Operating temperature range extended to –40°C to +85°C, making it viable in extreme
+                                climates</li>
+                            <li>Zero critical mineral dependency — no cobalt, nickel, or lithium required in the
+                                formulation</li>
+                        </ul>
+                    </div>
+
+                    <p>The implications for the renewable energy sector are profound. Currently, one of the primary
+                        barriers to widespread adoption of solar and wind power is the inability to store generated
+                        electricity cost-effectively at scale. With this new battery chemistry, utility-scale storage
+                        becomes economically comparable to fossil fuel peaker plants — a tipping point that energy
+                        economists have long anticipated.</p>
+
+                    <h2 id="section3">Real-World Applications</h2>
+
+                    <p>Beyond grid storage, the research team has identified multiple immediate application domains. The
+                        technology's fast-charging capability and high energy density make it particularly attractive
+                        for electric vehicle manufacturers, while its wide operating temperature range opens doors for
+                        aerospace and defense applications.</p>
+
+                    <div class="article-img-grid">
+                        <img src="https://images.unsplash.com/photo-1509391366360-2e959784a276?q=80&w=600&auto=format&fit=crop"
+                            alt="Solar panels" />
+                        <img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?q=80&w=600&auto=format&fit=crop"
+                            alt="Research" />
+                    </div>
+
+                    <p>Three major energy companies have already initiated discussions with the University's Technology
+                        Transfer Office regarding licensing agreements. Additionally, two JSM SR. SEC. SCHOOL-affiliated
+                        startup
+                        ventures are in the early stages of commercialization planning, supported by the university's
+                        Innovation Hub incubator program.</p>
+
+                    <h2 id="section4">What This Means for Students</h2>
+
+                    <p>For current and prospective students, this breakthrough underscores the real-world impact that a
+                        JSM SR. SEC. SCHOOL education enables. Graduate students who participated in the research have
+                        co-authored
+                        papers that have been accepted by Nature Energy and Advanced Materials — two of the most
+                        prestigious journals in the field.</p>
+
+                    <p>The university plans to integrate findings from this research into updated curriculum modules for
+                        both undergraduate and graduate programs in Chemistry, Materials Science, and Electrical
+                        Engineering, ensuring that students learn from the very forefront of global scientific progress.
+                    </p>
+
+                </div>
+
+                <!-- Tags + Share -->
+                <div class="post-tags-share">
+                    <div class="post-tags">
+                        <span class="post-tags-label">Tags:</span>
+                        <a href="#" class="tag-pill">Research</a>
+                        <a href="#" class="tag-pill">Energy</a>
+                        <a href="#" class="tag-pill">Innovation</a>
+                        <a href="#" class="tag-pill">Science</a>
+                        <a href="#" class="tag-pill">Technology</a>
+                    </div>
+                    <div class="share-btns">
+                        <span class="share-label">Share:</span>
+                        <a href="#" class="share-btn fb" title="Facebook"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="share-btn tw" title="X/Twitter"><i class="fab fa-x-twitter"></i></a>
+                        <a href="#" class="share-btn li" title="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#" class="share-btn cp" title="Copy Link" id="copyBtn"><i class="fa fa-link"></i></a>
+                    </div>
+                </div>
+
+                <!-- Author Bio -->
+                <div class="author-bio-box">
+                    <img src="https://images.unsplash.com/photo-1568602471122-7832951cc4c5?q=80&w=160&auto=format&fit=crop"
+                        alt="Dr. James Carter" class="author-bio-avatar" />
+                    <div>
+                        <div class="author-bio-name">Dr. James Carter</div>
+                        <div class="author-bio-role">Head of Research — Department of Sciences</div>
+                        <div class="author-bio-text">Dr. Carter holds a Ph.D. in Materials Chemistry from MIT and has
+                            over 18 years of experience in energy storage research. He has published 120+ peer-reviewed
+                            papers and holds 14 international patents. He joined JSM SR. SEC. SCHOOL in 2012 and leads
+                            the
+                            Advanced Materials and Energy Lab.</div>
+                        <div class="author-bio-socials">
+                            <a href="#" class="author-bio-social"><i class="fab fa-x-twitter"></i></a>
+                            <a href="#" class="author-bio-social"><i class="fab fa-linkedin-in"></i></a>
+                            <a href="#" class="author-bio-social"><i class="fa fa-envelope"></i></a>
+                        </div>
+                    </div>
+                </div>
+
+
+
+
+            </article>
+
+            <!-- Sidebar -->
+            <aside>
+
+                <!-- Newsletter -->
+                <div class="sidebar-widget newsletter-widget">
+                    <div class="widget-title">Stay Updated</div>
+                    <p class="newsletter-desc">Get the latest news and research updates delivered straight to your
+                        inbox.</p>
+                    <input type="email" class="newsletter-input" placeholder="Your email address" />
+                    <button class="newsletter-btn">Subscribe Now</button>
+                </div>
+
+                <!-- Recent Posts -->
+                <div class="sidebar-widget">
+                    <div class="widget-title">Recent Posts</div>
+                    <a href="#" class="recent-post-item">
+                        <img src="img/hero-bg.webp" alt="" class="recent-post-thumb" />
+                        <div>
+                            <div class="recent-post-title">Breakthrough in Renewable Energy Storage</div>
+                            <div class="recent-post-date"><i class="fa fa-calendar me-1"></i> Feb 14, 2025</div>
+                        </div>
+                    </a>
+                    <a href="#" class="recent-post-item">
+                        <img src="https://images.unsplash.com/photo-1503676260728-1c00da094a0b?q=80&w=120&auto=format&fit=crop"
+                            alt="" class="recent-post-thumb" />
+                        <div>
+                            <div class="recent-post-title">AI Transforming the University Classroom</div>
+                            <div class="recent-post-date"><i class="fa fa-calendar me-1"></i> Jan 28, 2025</div>
+                        </div>
+                    </a>
+                    <a href="#" class="recent-post-item">
+                        <img src="https://images.unsplash.com/photo-1529390079861-591de354faf5?q=80&w=120&auto=format&fit=crop"
+                            alt="" class="recent-post-thumb" />
+                        <div>
+                            <div class="recent-post-title">Alumni Changing the World One Innovation at a Time</div>
+                            <div class="recent-post-date"><i class="fa fa-calendar me-1"></i> Jan 12, 2025</div>
+                        </div>
+                    </a>
+                </div>
+
+                <!-- Categories -->
+                <div class="sidebar-widget">
+                    <div class="widget-title">Categories</div>
+                    <ul class="category-list">
+                        <li><a href="#">Research</a> <span class="cat-count">12</span></li>
+                        <li><a href="#">Innovation</a> <span class="cat-count">8</span></li>
+                        <li><a href="#">Campus Life</a> <span class="cat-count">15</span></li>
+                        <li><a href="#">Faculty</a> <span class="cat-count">6</span></li>
+                        <li><a href="#">Alumni</a> <span class="cat-count">9</span></li>
+                    </ul>
+                </div>
+
+                <!-- Tags -->
+                <div class="sidebar-widget">
+                    <div class="widget-title">Popular Tags</div>
+                    <div class="tags-cloud">
+                        <a href="#" class="tag-pill">Research</a>
+                        <a href="#" class="tag-pill">AI</a>
+                        <a href="#" class="tag-pill">Science</a>
+                        <a href="#" class="tag-pill">Campus</a>
+                        <a href="#" class="tag-pill">Alumni</a>
+                        <a href="#" class="tag-pill">Faculty</a>
+                        <a href="#" class="tag-pill">Innovation</a>
+                        <a href="#" class="tag-pill">Engineering</a>
+                        <a href="#" class="tag-pill">Medicine</a>
+                    </div>
+                </div>
+
+            </aside>
+        </div>
+    </div>
+
+
+    <div class="cta-card bg-light">
+        <img src="img/newslater-img-02.jpg" alt="Apply for Admission" class="cta-card-img" data-aos="fade-right"
+            data-aos-duration="1000" />
+        <div class="cta-card-body" data-aos="fade-left" data-aos-duration="1000" data-aos-delay="200">
+            <h2 class="cta-card-title">Apply for <span class="underline-accent">admission?</span></h2>
+            <p class="cta-card-text">
+                A place to provide students with enough knowledge and skills in a
+                complex world. Are you looking for exceptional education experience?
+                JSM SR. SEC. SCHOOL might be the place for you.
+            </p>
+            <div class="cta-email-form">
+                <input type="email" class="cta-email-input" placeholder="Email Address..." />
+                <button class="cta-subscribe-btn">
+                    Subscribe <i class="fa fa-arrow-up-right-from-square" style="font-size:0.75rem;"></i>
+                </button>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- Main Footer -->
+    <footer class="main-footer">
+        <div class="container footer-inner">
+            <div class="row g-5   align-items-start">
+
+                <!-- About -->
+                <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-duration="800" data-aos-delay="100">
+                    <div class="footer-col-title">About Us<span class="dot">.</span></div>
+                    <p class="footer-brand-desc">
+                        The residential semester takes place at a specially designed campus,
+                        which provides a support system that aids students in becoming
+                        confident and self-reliant.
+                    </p>
+                    <div class="footer-socials">
+                        <a href="#" class="footer-social-btn"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="footer-social-btn"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="footer-social-btn"><i class="fab fa-x-twitter"></i></a>
+                        <a href="#" class="footer-social-btn"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+
+                <!-- Essential -->
+                <div class="col-lg-2 col-md-6" data-aos="fade-up" data-aos-duration="800" data-aos-delay="200">
+                    <div class="footer-col-title">Essential<span class="dot">.</span></div>
+                    <ul class="footer-links">
+                        <li><a href="#">About Us</a></li>
+                        <li><a href="#">Our Team</a></li>
+                        <li><a href="#">What We Do</a></li>
+                        <li><a href="#">Pricing Plans</a></li>
+                        <li><a href="#">FAQ</a></li>
+                        <li><a href="#">Contact Us</a></li>
+                    </ul>
+                </div>
+
+                <!-- Programs -->
+                <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-duration="800" data-aos-delay="300">
+                    <div class="footer-col-title">Programs<span class="dot">.</span></div>
+                    <ul class="footer-links footer-links-2col">
+                        <li><a href="#">Science</a></li>
+                        <li><a href="#">Careers</a></li>
+                        <li><a href="#">Commerce</a></li>
+                        <li><a href="#">Prototype</a></li>
+                        <li><a href="#">Arts &amp; Design</a></li>
+                        <li><a href="#">Refund Policy</a></li>
+                        <li><a href="#">Robotics</a></li>
+                        <li><a href="#">How It Works</a></li>
+                        <li><a href="#">Game Design</a></li>
+                        <li><a href="#">Fashion Dev</a></li>
+                    </ul>
+                </div>
+
+                <!-- Get in Touch -->
+                <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-duration="800" data-aos-delay="400">
+                    <div class="footer-col-title">Get in touch<span class="dot">.</span></div>
+
+                    <div class="footer-contact-item">
+                        <div class="footer-contact-icon"><i class="fa fa-phone"></i></div>
+                        <div>
+                            <span class="footer-contact-value">+1 (444) 000-8888</span>
+                            <span class="footer-contact-label">Phone number</span>
+                        </div>
+                    </div>
+
+                    <div class="footer-contact-item">
+                        <div class="footer-contact-icon"><i class="fa fa-envelope"></i></div>
+                        <div>
+                            <span class="footer-contact-value">info@JSM SR. SEC. SCHOOL.edu</span>
+                            <span class="footer-contact-label">Email address</span>
+                        </div>
+                    </div>
+
+                    <div class="footer-contact-item">
+                        <div class="footer-contact-icon"><i class="fa fa-location-dot"></i></div>
+                        <div>
+                            <span class="footer-contact-value">New York, US</span>
+                            <span class="footer-contact-label">12/A, New Booston Tower</span>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <!-- Bottom Bar -->
+        <div class="container">
+            <div class="footer-bottom">
+                <a href="#" class="footer-bottom-brand">
+                    <div class="footer-bottom-logo"><i class="fa fa-university"></i></div>
+                    <span class="footer-bottom-name">JSM SR. SEC. SCHOOL.</span>
+                </a>
+                <p class="footer-copyright mb-0">
+                    Copyright & Design & Developed By &copy;
+                    <a href="https://brandingwaale.com/" target="_blank" class="highlight-brand">
+                        Brandingwaale Webtech
+                    </a>,
+                    All rights reserved
+                </p>
+
+            </div>
+        </div>
+    </footer>
+
+
+
+
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/js/bootstrap.bundle.min.js"></script>
+    <script>
+        // Reading progress bar
+        window.addEventListener('scroll', () => {
+            const article = document.getElementById('articleContent');
+            const bar = document.getElementById('readProgress');
+            if (!article) return;
+            const articleTop = article.getBoundingClientRect().top + window.scrollY;
+            const articleH = article.offsetHeight;
+            const scrolled = window.scrollY - articleTop;
+            const pct = Math.min(100, Math.max(0, (scrolled / articleH) * 100));
+            bar.style.width = pct + '%';
+        });
+
+        // TOC active highlight
+        const tocLinks = document.querySelectorAll('.toc-list li a');
+        const sections = document.querySelectorAll('.article-content h2[id]');
+
+        window.addEventListener('scroll', () => {
+            let current = '';
+            sections.forEach(sec => {
+                if (window.scrollY >= sec.offsetTop - 140) current = sec.id;
+            });
+            tocLinks.forEach(a => {
+                a.classList.remove('active');
+                if (a.getAttribute('href') === '#' + current) a.classList.add('active');
+            });
+        });
+
+        // Copy link button
+        document.getElementById('copyBtn').addEventListener('click', (e) => {
+            e.preventDefault();
+            navigator.clipboard.writeText(window.location.href).then(() => {
+                const btn = document.getElementById('copyBtn');
+                btn.innerHTML = '<i class="fa fa-check"></i>';
+                btn.style.background = '#22c55e';
+                setTimeout(() => {
+                    btn.innerHTML = '<i class="fa fa-link"></i>';
+                    btn.style.background = 'var(--crimson)';
+                }, 2000);
+            });
+        });
+
+        // Smooth scroll for TOC
+        tocLinks.forEach(link => {
+            link.addEventListener('click', e => {
+                e.preventDefault();
+                const id = link.getAttribute('href').slice(1);
+                const el = document.getElementById(id);
+                if (el) el.scrollIntoView({ behavior: 'smooth', block: 'start' });
+            });
+        });
+    </script>
+</body>
+
+</html>

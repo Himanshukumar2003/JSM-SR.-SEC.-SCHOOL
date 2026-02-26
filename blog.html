@@ -1,0 +1,644 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Blog & News – JSM SR. SEC. SCHOOL</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,800;1,400&family=Source+Sans+3:wght@300;400;600&display=swap"
+        rel="stylesheet" />
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="stylesheet" href="blog.css">
+
+
+</head>
+
+<body>
+
+    <div class="nav">
+        <!-- Top Bar -->
+        <div class="top-bar">
+            <div class="container">
+                <div class="top-bar-content">
+                    <div class="top-bar-left">
+                        <a href="tel:+917206045720" class="top-bar-item">
+                            <i class="fa fa-phone"></i>
+                            <span>+91 7206045720-21,22,23,24</span>
+                        </a>
+                        <a href="mailto:info@university.edu" class="top-bar-item">
+                            <i class="fa fa-envelope"></i>
+                            <span>info@university.edu</span>
+                        </a>
+                        <div class="top-bar-item">
+                            <i class="fa fa-location-dot"></i>
+                            <span>Campus Address, City</span>
+                        </div>
+                    </div>
+                    <div class="top-bar-right">
+                        <a href="#" class="top-social-btn"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="top-social-btn"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="top-social-btn"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#" class="top-social-btn"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Main Navbar -->
+        <div class="navbar-section" id="navbarSection">
+            <nav class="main-nav">
+                <div class="container d-flex align-items-center justify-content-between">
+                    <!-- Logo (Left) -->
+                    <a href="index.html" class="navbar-brand">
+                        <img src="img/logo.png" alt="Logo" class="logo" />
+                    </a>
+
+                    <!-- Nav Links (Center) -->
+                    <ul class="nav-center">
+                        <li><a href="index.html" class="active">Home</a></li>
+
+                        <!-- About us Dropdown -->
+                        <li>
+                            <a href="#"> About us <i class="fa fa-chevron-down"></i> </a>
+                            <div class="dropdown-menu-custom">
+                                <a href="about.html">About</a>
+                                <a href="vision-mission.html">Our Vision & Mission</a>
+                                <a href="chairman-message.html">Chairman Message</a>
+                                <a href="principal-message.html">Principal Message</a>
+                            </div>
+                        </li>
+
+                        <!-- Admission Dropdown -->
+                        <li>
+                            <a href="#"> Admission <i class="fa fa-chevron-down"></i> </a>
+                            <div class="dropdown-menu-custom">
+                                <a href="admission-information.html">Admission Information</a>
+                                <a href="#">Download Registration Form</a>
+                                <a href="admission-process.html">Admission Process</a>
+                                <a href="#">Admission Schedule</a>
+                                <a href="#">Medical Information Form</a>
+                                <a href="new-register.html">Online Registration</a>
+                            </div>
+                        </li>
+
+                        <!-- Our Campus Dropdown -->
+                        <li>
+                            <a href="#"> Our Campus <i class="fa fa-chevron-down"></i> </a>
+                            <div class="dropdown-menu-custom">
+                                <a href="campus.html">Campus</a>
+                                <a href="language-lab.html">Language Lab</a>
+                                <a href="medical-room.html">Medical Room</a>
+                                <a href="science-lab.html">Science Lab</a>
+                                <a href="smart-classes.html">Smart Classes</a>
+                                <a href="school-library.html">School Library</a>
+                                <a href="school-transport.html">School Transport</a>
+                                <a href="counselling-area.html">Counselling Area</a>
+                                <a href="ongoing-classes.html">Ongoing Classes</a>
+                                <a href="house-system.html">House System</a>
+                            </div>
+                        </li>
+
+                        <!-- Academics Dropdown -->
+                        <li>
+                            <a href="#"> Academics <i class="fa fa-chevron-down"></i> </a>
+                            <div class="dropdown-menu-custom">
+                                <a href="#">Programs</a>
+                                <a href="#">Faculty</a>
+                                <a href="#">Academic Calendar</a>
+                                <a href="#">Departments</a>
+                            </div>
+                        </li>
+
+                        <!-- Gallery Dropdown -->
+                        <li>
+                            <a href="#"> Gallery <i class="fa fa-chevron-down"></i> </a>
+                            <div class="dropdown-menu-custom">
+                                <a href="photo-gallery.html">Photo Gallery</a>
+                                <a href="video-gallery.html">Video Gallery</a>
+                                <a href="events-and-celebrations.html">Events and Celebrations</a>
+                            </div>
+                        </li>
+
+                        <li><a href="blog.html">Blogs</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+
+                    <!-- Apply Now Button (Right) -->
+                    <div class="d-none d-lg-inline">
+                        <button class="btn-apply">
+                            <i class="fa fa-paper-plane"></i>
+                            <span>Apply Now</span>
+                        </button>
+                    </div>
+                    <!-- Mobile Menu Button -->
+                    <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Toggle menu">
+                        <span class="menu-icon"></span>
+                    </button>
+                </div>
+            </nav>
+        </div>
+    </div>
+
+    <!-- ═══ MOBILE NAV OVERLAY ═══ -->
+    <div class="mobile-nav-overlay" id="mobileOverlay"></div>
+
+    <!-- ═══ MOBILE NAV PANEL ═══ -->
+    <div class="mobile-nav" id="mobileNav">
+        <div class="mobile-nav-header">
+            <a href="index.html" class="navbar-brand">
+                <img src="img/logo.png" alt="Logo" class="logo" />
+            </a>
+
+            <button class="mobile-nav-close" id="mobileNavClose">
+                <i class="fa fa-times"></i>
+            </button>
+        </div>
+
+        <div class="mobile-nav-body">
+            <ul class="mobile-nav-links">
+                <li><a href="index.html" class="active">Home</a></li>
+
+                <!-- About us Mobile Dropdown -->
+                <li>
+                    <a href="#" class="mobile-dropdown-toggle">
+                        About us <i class="fa fa-chevron-down"></i>
+                    </a>
+                    <div class="mobile-dropdown">
+                        <a href="about.html">About</a>
+                        <a href="vision-mission.html">Our Vision & Mission</a>
+                        <a href="chairman-message.html">Chairman Message</a>
+                        <a href="principal-message.html">Principal Message</a>
+                    </div>
+                </li>
+
+                <!-- Admission Mobile Dropdown -->
+                <li>
+                    <a href="#" class="mobile-dropdown-toggle">
+                        Admission <i class="fa fa-chevron-down"></i>
+                    </a>
+                    <div class="mobile-dropdown">
+                        <a href="admission-information.html">Admission Information</a>
+                        <a href="#">Download Registration Form</a>
+                        <a href="admission-process.html">Admission Process</a>
+                        <a href="#">Admission Schedule</a>
+                        <a href="#">Medical Information Form</a>
+                        <a href="new-register.html">Online Registration</a>
+                    </div>
+                </li>
+
+                <!-- Our Campus Mobile Dropdown -->
+                <li>
+                    <a href="#" class="mobile-dropdown-toggle">
+                        Our Campus <i class="fa fa-chevron-down"></i>
+                    </a>
+                    <div class="mobile-dropdown">
+                        <a href="campus.html">Campus</a>
+                        <a href="language-lab.html">Language Lab</a>
+                        <a href="medical-room.html">Medical Room</a>
+                        <a href="science-lab.html">Science Lab</a>
+                        <a href="smart-classes.html">Smart Classes</a>
+                        <a href="school-library.html">School Library</a>
+                        <a href="school-transport.html">School Transport</a>
+                        <a href="counselling-area.html">Counselling Area</a>
+                        <a href="ongoing-classes.html">Ongoing Classes</a>
+                        <a href="house-system.html">House System</a>
+                    </div>
+                </li>
+
+                <!-- Academics Mobile Dropdown -->
+                <li>
+                    <a href="#" class="mobile-dropdown-toggle">
+                        Academics <i class="fa fa-chevron-down"></i>
+                    </a>
+                    <div class="mobile-dropdown">
+                        <a href="#">Programs</a>
+                        <a href="#">Faculty</a>
+                        <a href="#">Academic Calendar</a>
+                        <a href="#">Departments</a>
+                    </div>
+                </li>
+
+                <!-- Gallery Mobile Dropdown -->
+                <li>
+                    <a href="#" class="mobile-dropdown-toggle">
+                        Gallery <i class="fa fa-chevron-down"></i>
+                    </a>
+                    <div class="mobile-dropdown">
+                        <a href="photo-gallery.html">Photo Gallery</a>
+                        <a href="video-gallery.html">Video Gallery</a>
+                        <a href="events-and-celebrations.html">Events and Celebrations</a>
+                    </div>
+                </li>
+
+                <li><a href="blog.html">Blogs</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </div>
+
+        <div class="mobile-nav-footer">
+            <a href="new-register.html" class="mobile-nav-cta">
+                <i class="fa fa-paper-plane"></i> Apply Now
+            </a>
+        </div>
+    </div>
+
+    <section class="page-hero">
+        <div class="page-hero-bg"></div>
+        <div class="page-hero-overlay"></div>
+        <div class="container page-hero-content">
+            <div class="page-hero-inner">
+                <div class="breadcrumb-trail">
+                    <a href="JSM SR. SEC. SCHOOL-university.html"><i class="fa fa-house me-1"></i> Home</a>
+                    <span class="sep"><i class="fa fa-chevron-right" style="font-size:0.6rem;"></i></span>
+                    <span class="current">Blog &amp; News</span>
+                </div>
+                <h1 class="page-title">Blog &amp; News</h1>
+                <p class="page-subtitle">
+                    Stay informed with the latest stories, research breakthroughs,
+                    campus events, and academic insights from JSM SR. SEC. SCHOOL.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- ─── FILTER BAR ─── -->
+    <div class="filter-bar">
+        <div class="container">
+            <div class="filter-inner">
+                <ul class="filter-tabs" id="filterTabs">
+                    <li><button class="active" onclick="filterPosts('all', this)">All Posts</button></li>
+                    <li><button onclick="filterPosts('research', this)">Research</button></li>
+                    <li><button onclick="filterPosts('innovation', this)">Innovation</button></li>
+                    <li><button onclick="filterPosts('campus', this)">Campus Life</button></li>
+                    <li><button onclick="filterPosts('faculty', this)">Faculty</button></li>
+                    <li><button onclick="filterPosts('alumni', this)">Alumni</button></li>
+                </ul>
+                <div class="search-box">
+                    <input type="text" placeholder="Search articles..." />
+                    <button><i class="fa fa-search"></i></button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ─── FEATURED POST ─── -->
+    <section class="featured-section">
+        <div class="container">
+            <div class="section-header mb-4">
+                <span class="section-heading">Featured Story<span class="dot">.</span></span>
+            </div>
+            <a href="#" class="featured-post">
+                <div class="featured-img-wrap">
+                    <img src="img/hero-bg.webp" alt="Featured" class="featured-img" />
+                    <span class="featured-img-badge">Research</span>
+                </div>
+                <div class="featured-body">
+                    <div class="featured-meta">
+                        <span><i class="fa fa-calendar me-1"></i> Feb 14, 2025</span>
+                        <span class="meta-dot"></span>
+                        <span><i class="fa fa-clock me-1"></i> 8 min read</span>
+                        <span class="meta-dot"></span>
+                        <span><i class="fa fa-eye me-1"></i> 2.4K views</span>
+                    </div>
+                    <h2 class="featured-title">JSM SR. SEC. SCHOOL Research Team Unveils Breakthrough in Renewable
+                        Energy
+                        Storage</h2>
+                    <p class="featured-excerpt">
+                        Our interdisciplinary team of scientists and engineers have developed a novel
+                        battery technology that could revolutionize the way we store and distribute
+                        clean energy. This breakthrough promises to reduce storage costs by up to 60%
+                        while improving energy density threefold.
+                    </p>
+                    <span class="read-more-link">
+                        Read Full Story
+                        <span class="arrow-circle"><i class="fa fa-arrow-right"></i></span>
+                    </span>
+                    <div class="featured-author">
+                        <img src="https://images.unsplash.com/photo-1568602471122-7832951cc4c5?q=80&w=80&auto=format&fit=crop"
+                            alt="Author" class="author-avatar" />
+                        <div>
+                            <div class="author-name">Dr. James Carter</div>
+                            <div class="author-role">Head of Research, Sciences Dept.</div>
+                        </div>
+                    </div>
+                </div>
+            </a>
+        </div>
+    </section>
+
+    <!-- ─── BLOG GRID + SIDEBAR ─── -->
+    <section class="blog-section">
+        <div class="container">
+            <div class="blog-layout">
+
+                <!-- Main Grid -->
+                <div>
+                    <div class="section-header">
+                        <span class="section-heading">Latest Articles<span class="dot">.</span></span>
+                        <a href="#" class="see-all-link">View All <span class="arrow-circle"><i
+                                    class="fa fa-arrow-right"></i></span></a>
+                    </div>
+
+                    <div class="row g-4" id="blogGrid">
+
+                        <div class="col-md-6 blog-post-item" data-cat="innovation">
+                            <a href="#" class="blog-card">
+                                <div class="blog-card-img-wrap">
+                                    <img src="img/hero-bg.webp" alt="Blog" class="blog-card-img" />
+                                    <span class="blog-card-category">Innovation</span>
+                                </div>
+                                <div class="blog-card-body">
+                                    <div class="blog-card-meta">
+                                        <span>Jan 28, 2025</span>
+                                        <span class="meta-sep">·</span>
+                                        <span>5 min read</span>
+                                    </div>
+                                    <div class="blog-card-title">How AI is Transforming the Modern University Classroom
+                                        Experience</div>
+                                    <p class="blog-card-excerpt">From personalized learning paths to real-time feedback,
+                                        AI tools are reshaping how students and professors interact.</p>
+                                    <div class="blog-card-footer">
+                                        <div class="blog-card-author">
+                                            <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?q=80&w=60&auto=format&fit=crop"
+                                                alt="" class="blog-card-avatar" />
+                                            <span class="blog-card-author-name">Prof. Sarah Ahmed</span>
+                                        </div>
+                                        <span class="blog-card-read">Read More <i class="fa fa-arrow-right"></i></span>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+
+                        <div class="col-md-6 blog-post-item" data-cat="campus">
+                            <a href="#" class="blog-card">
+                                <div class="blog-card-img-wrap">
+                                    <img src="https://images.unsplash.com/photo-1541339907198-e08756dedf3f?q=80&w=600&auto=format&fit=crop"
+                                        alt="Blog" class="blog-card-img" />
+                                    <span class="blog-card-category">Campus Life</span>
+                                </div>
+                                <div class="blog-card-body">
+                                    <div class="blog-card-meta">
+                                        <span>Jan 20, 2025</span>
+                                        <span class="meta-sep">·</span>
+                                        <span>4 min read</span>
+                                    </div>
+                                    <div class="blog-card-title">Making the Most of Your First Year: A Student's Guide
+                                        to Campus Life</div>
+                                    <p class="blog-card-excerpt">From clubs to study halls, here's everything you need
+                                        to know to thrive in your first year at JSM SR. SEC. SCHOOL.</p>
+                                    <div class="blog-card-footer">
+                                        <div class="blog-card-author">
+                                            <img src="https://images.unsplash.com/photo-1580489944761-15a19d654956?q=80&w=60&auto=format&fit=crop"
+                                                alt="" class="blog-card-avatar" />
+                                            <span class="blog-card-author-name">Dr. Layla Hassan</span>
+                                        </div>
+                                        <span class="blog-card-read">Read More <i class="fa fa-arrow-right"></i></span>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+
+                        <div class="col-md-6 blog-post-item" data-cat="alumni">
+                            <a href="#" class="blog-card">
+                                <div class="blog-card-img-wrap">
+                                    <img src="https://images.unsplash.com/photo-1529390079861-591de354faf5?q=80&w=600&auto=format&fit=crop"
+                                        alt="Blog" class="blog-card-img" />
+                                    <span class="blog-card-category">Alumni</span>
+                                </div>
+                                <div class="blog-card-body">
+                                    <div class="blog-card-meta">
+                                        <span>Jan 12, 2025</span>
+                                        <span class="meta-sep">·</span>
+                                        <span>6 min read</span>
+                                    </div>
+                                    <div class="blog-card-title">How Our Alumni Are Changing the World One Innovation at
+                                        a Time</div>
+                                    <p class="blog-card-excerpt">Meet five JSM SR. SEC. SCHOOL graduates who are leading
+                                        change across
+                                        industries, from clean tech to social entrepreneurship.</p>
+                                    <div class="blog-card-footer">
+                                        <div class="blog-card-author">
+                                            <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?q=80&w=60&auto=format&fit=crop"
+                                                alt="" class="blog-card-avatar" />
+                                            <span class="blog-card-author-name">Dr. Michael Ross</span>
+                                        </div>
+                                        <span class="blog-card-read">Read More <i class="fa fa-arrow-right"></i></span>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+
+                        <div class="col-md-6 blog-post-item" data-cat="faculty">
+                            <a href="#" class="blog-card">
+                                <div class="blog-card-img-wrap">
+                                    <img src="https://images.unsplash.com/photo-1524178232363-1fb2b075b655?q=80&w=600&auto=format&fit=crop"
+                                        alt="Blog" class="blog-card-img" />
+                                    <span class="blog-card-category">Faculty</span>
+                                </div>
+                                <div class="blog-card-body">
+                                    <div class="blog-card-meta">
+                                        <span>Jan 5, 2025</span>
+                                        <span class="meta-sep">·</span>
+                                        <span>7 min read</span>
+                                    </div>
+                                    <div class="blog-card-title">Inside the Lab: A Day in the Life of a JSM SR. SEC.
+                                        SCHOOL Research
+                                        Professor</div>
+                                    <p class="blog-card-excerpt">We shadowed Dr. Carter for a full day to understand
+                                        what drives our world-class researchers every morning.</p>
+                                    <div class="blog-card-footer">
+                                        <div class="blog-card-author">
+                                            <img src="https://images.unsplash.com/photo-1568602471122-7832951cc4c5?q=80&w=60&auto=format&fit=crop"
+                                                alt="" class="blog-card-avatar" />
+                                            <span class="blog-card-author-name">Dr. James Carter</span>
+                                        </div>
+                                        <span class="blog-card-read">Read More <i class="fa fa-arrow-right"></i></span>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+
+                        <div class="col-md-6 blog-post-item" data-cat="research">
+                            <a href="#" class="blog-card">
+                                <div class="blog-card-img-wrap">
+                                    <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=600&auto=format&fit=crop"
+                                        alt="Blog" class="blog-card-img" />
+                                    <span class="blog-card-category">Research</span>
+                                </div>
+                                <div class="blog-card-body">
+                                    <div class="blog-card-meta">
+                                        <span>Dec 28, 2024</span>
+                                        <span class="meta-sep">·</span>
+                                        <span>9 min read</span>
+                                    </div>
+                                    <div class="blog-card-title">New Study Links Early Childhood Education to Long-Term
+                                        Academic Success</div>
+                                    <p class="blog-card-excerpt">A 10-year longitudinal study by our education faculty
+                                        reveals powerful correlations between early learning environments and university
+                                        performance.</p>
+                                    <div class="blog-card-footer">
+                                        <div class="blog-card-author">
+                                            <img src="https://images.unsplash.com/photo-1580489944761-15a19d654956?q=80&w=60&auto=format&fit=crop"
+                                                alt="" class="blog-card-avatar" />
+                                            <span class="blog-card-author-name">Dr. Layla Hassan</span>
+                                        </div>
+                                        <span class="blog-card-read">Read More <i class="fa fa-arrow-right"></i></span>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+
+                        <div class="col-md-6 blog-post-item" data-cat="innovation">
+                            <a href="#" class="blog-card">
+                                <div class="blog-card-img-wrap">
+                                    <img src="https://images.unsplash.com/photo-1550751827-4bd374c3f58b?q=80&w=600&auto=format&fit=crop"
+                                        alt="Blog" class="blog-card-img" />
+                                    <span class="blog-card-category">Innovation</span>
+                                </div>
+                                <div class="blog-card-body">
+                                    <div class="blog-card-meta">
+                                        <span>Dec 15, 2024</span>
+                                        <span class="meta-sep">·</span>
+                                        <span>5 min read</span>
+                                    </div>
+                                    <div class="blog-card-title">JSM SR. SEC. SCHOOL's New Innovation Hub Opens Doors
+                                        for Student
+                                        Startups</div>
+                                    <p class="blog-card-excerpt">Over 40 student-led ventures have already secured
+                                        mentorship and seed funding through the new campus Innovation Hub.</p>
+                                    <div class="blog-card-footer">
+                                        <div class="blog-card-author">
+                                            <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?q=80&w=60&auto=format&fit=crop"
+                                                alt="" class="blog-card-avatar" />
+                                            <span class="blog-card-author-name">Dr. Michael Ross</span>
+                                        </div>
+                                        <span class="blog-card-read">Read More <i class="fa fa-arrow-right"></i></span>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+
+                    </div>
+
+                    <!-- Pagination -->
+                    <div class="pagination-wrap">
+                        <button class="page-btn prev-next"><i class="fa fa-arrow-left"></i> Prev</button>
+                        <button class="page-btn active">1</button>
+                        <button class="page-btn">2</button>
+                        <button class="page-btn">3</button>
+                        <button class="page-btn">4</button>
+                        <button class="page-btn prev-next">Next <i class="fa fa-arrow-right"></i></button>
+                    </div>
+                </div>
+
+                <!-- Sidebar -->
+                <aside>
+
+                    <!-- Newsletter -->
+                    <div class="sidebar-widget newsletter-widget">
+                        <div class="widget-title">Stay Updated</div>
+                        <p class="newsletter-desc">Get the latest news and research updates delivered straight to your
+                            inbox.</p>
+                        <input type="email" class="newsletter-input" placeholder="Your email address" />
+                        <button class="newsletter-btn">Subscribe Now</button>
+                    </div>
+
+                    <!-- Recent Posts -->
+                    <div class="sidebar-widget">
+                        <div class="widget-title">Recent Posts</div>
+                        <a href="#" class="recent-post-item">
+                            <img src="img/hero-bg.webp" alt="" class="recent-post-thumb" />
+                            <div>
+                                <div class="recent-post-title">Breakthrough in Renewable Energy Storage</div>
+                                <div class="recent-post-date"><i class="fa fa-calendar me-1"></i> Feb 14, 2025</div>
+                            </div>
+                        </a>
+                        <a href="#" class="recent-post-item">
+                            <img src="https://images.unsplash.com/photo-1503676260728-1c00da094a0b?q=80&w=120&auto=format&fit=crop"
+                                alt="" class="recent-post-thumb" />
+                            <div>
+                                <div class="recent-post-title">AI Transforming the University Classroom</div>
+                                <div class="recent-post-date"><i class="fa fa-calendar me-1"></i> Jan 28, 2025</div>
+                            </div>
+                        </a>
+                        <a href="#" class="recent-post-item">
+                            <img src="https://images.unsplash.com/photo-1529390079861-591de354faf5?q=80&w=120&auto=format&fit=crop"
+                                alt="" class="recent-post-thumb" />
+                            <div>
+                                <div class="recent-post-title">Alumni Changing the World One Innovation at a Time</div>
+                                <div class="recent-post-date"><i class="fa fa-calendar me-1"></i> Jan 12, 2025</div>
+                            </div>
+                        </a>
+                    </div>
+
+                    <!-- Categories -->
+                    <div class="sidebar-widget">
+                        <div class="widget-title">Categories</div>
+                        <ul class="category-list">
+                            <li><a href="#">Research</a> <span class="cat-count">12</span></li>
+                            <li><a href="#">Innovation</a> <span class="cat-count">8</span></li>
+                            <li><a href="#">Campus Life</a> <span class="cat-count">15</span></li>
+                            <li><a href="#">Faculty</a> <span class="cat-count">6</span></li>
+                            <li><a href="#">Alumni</a> <span class="cat-count">9</span></li>
+                        </ul>
+                    </div>
+
+                    <!-- Tags -->
+                    <div class="sidebar-widget">
+                        <div class="widget-title">Popular Tags</div>
+                        <div class="tags-cloud">
+                            <a href="#" class="tag-pill">Research</a>
+                            <a href="#" class="tag-pill">AI</a>
+                            <a href="#" class="tag-pill">Science</a>
+                            <a href="#" class="tag-pill">Campus</a>
+                            <a href="#" class="tag-pill">Alumni</a>
+                            <a href="#" class="tag-pill">Faculty</a>
+                            <a href="#" class="tag-pill">Innovation</a>
+                            <a href="#" class="tag-pill">Engineering</a>
+                            <a href="#" class="tag-pill">Medicine</a>
+                        </div>
+                    </div>
+
+                </aside>
+            </div>
+        </div>
+    </section>
+
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/js/bootstrap.bundle.min.js"></script>
+    <script src="script.js"></script>
+    <script>
+        // Filter posts by category
+        function filterPosts(cat, btn) {
+            // Update active button
+            document.querySelectorAll('#filterTabs button').forEach(b => b.classList.remove('active'));
+            btn.classList.add('active');
+
+            // Filter cards
+            const items = document.querySelectorAll('.blog-post-item');
+            items.forEach(item => {
+                if (cat === 'all' || item.dataset.cat === cat) {
+                    item.style.display = '';
+                    item.style.animation = 'fadeUp 0.4s ease both';
+                } else {
+                    item.style.display = 'none';
+                }
+            });
+        }
+
+        // Pagination buttons
+        document.querySelectorAll('.page-btn:not(.prev-next)').forEach(btn => {
+            btn.addEventListener('click', function () {
+                document.querySelectorAll('.page-btn:not(.prev-next)').forEach(b => b.classList.remove('active'));
+                this.classList.add('active');
+            });
+        });
+    </script>
+</body>
+
+</html>

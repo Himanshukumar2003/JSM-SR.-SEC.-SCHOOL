@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Navbar with Mobile Menu – UNEZA University</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,800;1,400&family=Mada:wght@400;500;600;700&display=swap"
+        rel="stylesheet" />
+    <link href="navbar.css" rel="stylesheet" />
+
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Mada', sans-serif;
+        }
+
+        /* Demo Hero */
+        .demo-hero {
+            height: 100vh;
+            background: linear-gradient(135deg, #96101e 0%, #c0162c 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #ffffff;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .demo-hero::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: url('https://images.unsplash.com/photo-1523050854058-8df90110c9f1?q=80&w=1920') center/cover;
+            opacity: 0.15;
+        }
+
+        .demo-hero-content {
+            position: relative;
+            z-index: 1;
+        }
+
+        .demo-hero h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: 3.5rem;
+            margin-bottom: 20px;
+            font-weight: 800;
+        }
+
+        .demo-hero p {
+            font-size: 1.2rem;
+            opacity: 0.9;
+        }
+    </style>
+</head>
+
+<body>
+
+
+    <!-- ═══ DEMO HERO ═══ -->
+    <div class="demo-hero">
+        <div class="demo-hero-content">
+            <h1>UNEZA University</h1>
+            <p>Complete Navbar with Mobile Menu • Desktop Same as Before</p>
+        </div>
+    </div>
+
+    <!-- ═══ JAVASCRIPT ═══ -->
+    <script>
+        // ═══ NAVBAR SCROLL ═══
+        const navbarSection = document.getElementById('navbarSection');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 50) {
+                navbarSection.classList.add('scrolled');
+            } else {
+                navbarSection.classList.remove('scrolled');
+            }
+        });
+
+        // ═══ MOBILE MENU ═══
+      
+    </script>
+</body>
+
+</html>

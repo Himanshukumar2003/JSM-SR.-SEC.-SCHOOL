@@ -1,0 +1,653 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Gallery – JSM SR. SEC. SCHOOL</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,800;1,400&family=Source+Sans+3:wght@300;400;600&display=swap"
+        rel="stylesheet" />
+    <!-- Fancybox -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.css" />
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="blog.css">
+</head>
+
+<body>
+
+    <div class="nav">
+        <div class="top-bar">
+            <div class="container">
+                <div class="top-bar-content">
+                    <div class="top-bar-left">
+                        <a href="tel:+917206045720" class="top-bar-item">
+                            <i class="fa fa-phone"></i>
+                            <span>+91 7206045720-21,22,23,24</span>
+                        </a>
+                        <a href="mailto:info@university.edu" class="top-bar-item">
+                            <i class="fa fa-envelope"></i>
+                            <span>info@university.edu</span>
+                        </a>
+                        <div class="top-bar-item">
+                            <i class="fa fa-location-dot"></i>
+                            <span>Campus Address, City</span>
+                        </div>
+                    </div>
+                    <div class="top-bar-right">
+                        <a href="#" class="top-social-btn"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="top-social-btn"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="top-social-btn"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#" class="top-social-btn"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="navbar-section" id="navbarSection">
+            <nav class="main-nav">
+                <div class="container d-flex align-items-center justify-content-between">
+                    <a href="#" class="navbar-brand">
+                        <img src="/img/logo.png" alt="Logo" class="logo" />
+                    </a>
+                    <ul class="nav-center">
+                        <li><a href="index.html" class="active">Home</a></li>
+                        <li>
+                            <a href="#">About us <i class="fa fa-chevron-down"></i></a>
+                            <div class="dropdown-menu-custom">
+                                <a href="about.html">About</a>
+                                <a href="vision-mission.html">Our Vision & Mission</a>
+                                <a href="chairman-message.html">Chairman Message</a>
+                                <a href="principal-message.html">Principal Message</a>
+                            </div>
+                        </li>
+                        <li>
+                            <a href="#">Admission <i class="fa fa-chevron-down"></i></a>
+                            <div class="dropdown-menu-custom">
+                                <a href="admission-information.html">Admission Information</a>
+                                <a href="#">Download Registration Form</a>
+                                <a href="admission-process.html">Admission Process</a>
+                                <a href="">Admission Schedule</a>
+                                <a href="#">Medical Information Form</a>
+                                <a href="new-register.html">Online Registration</a>
+                            </div>
+                        </li>
+                        <li>
+                            <a href="#">Our Campus <i class="fa fa-chevron-down"></i></a>
+                            <div class="dropdown-menu-custom">
+                                <a href="campus.html">Campus</a>
+                                <a href="science-lab.html">Science Lab</a>
+                                <a href="smart-classes.html">Smart Classes</a>
+                                <a href="school-library.html">School Library</a>
+                                <a href="counselling-area.html">Counselling Area</a>
+                                <a href="ongoing-classes.html">Ongoing Classes</a>
+                                <a href="sports-facilities.html">Sports Facilities</a>
+                            </div>
+                        </li>
+                        <li>
+                            <a href="#">Academics <i class="fa fa-chevron-down"></i></a>
+                            <div class="dropdown-menu-custom">
+                                <a href="#">Programs</a>
+                                <a href="#">Faculty</a>
+                                <a href="#">Academic Calendar</a>
+                                <a href="#">Departments</a>
+                            </div>
+                        </li>
+                        <li>
+                            <a href="#">Gallery <i class="fa fa-chevron-down"></i></a>
+                            <div class="dropdown-menu-custom">
+
+                                <a href="photo-gallery.html">Photo Gallery</a>
+                                <a href="video-gallery.html">Video Gallery</a>
+                                <a href="events-and-celebrations">Events and celebrations</a>
+                            </div>
+                        </li>
+                        <li><a href="blog.html">Blogs</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                    <button class="btn-apply">
+                        <i class="fa fa-paper-plane"></i>
+                        <span>Apply Now</span>
+                    </button>
+                    <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Toggle menu">
+                        <span class="menu-icon"></span>
+                    </button>
+                </div>
+            </nav>
+        </div>
+    </div>
+
+    <!-- ─── PAGE HERO ─── -->
+    <section class="page-hero">
+        <div class="page-hero-bg"></div>
+        <div class="page-hero-overlay"></div>
+        <div class="container page-hero-content">
+            <div class="page-hero-inner">
+                <div class="breadcrumb-trail">
+                    <a href="index.html"><i class="fa fa-house me-1"></i> Home</a>
+                    <span class="sep"><i class="fa fa-chevron-right" style="font-size:0.6rem;"></i></span>
+                    <span class="current">Gallery</span>
+                </div>
+                <h1 class="page-title">Campus Gallery</h1>
+                <p class="page-subtitle">
+                    Explore life at JSM SR. SEC. SCHOOL through our collection of campus moments —
+                    from classrooms and labs to events and student life.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- ─── GALLERY ─── -->
+    <section class="gallery-section">
+        <div class="container">
+
+            <!-- Filter Tabs -->
+            <div class="gallery-filter">
+                <button class="gf-btn active" data-filter="all">All Photos</button>
+                <button class="gf-btn" data-filter="campus">Campus</button>
+                <button class="gf-btn" data-filter="classroom">Classrooms</button>
+                <button class="gf-btn" data-filter="lab">Labs</button>
+                <button class="gf-btn" data-filter="assembly">Assembly</button>
+                <button class="gf-btn" data-filter="sports">Sports</button>
+                <button class="gf-btn" data-filter="staff">Staff</button>
+            </div>
+
+            <!-- Gallery Grid -->
+            <div class="gallery-grid" id="galleryGrid">
+
+                <!-- Campus -->
+                <a class="gallery-item" data-cat="campus" data-fancybox="gallery"
+                    href="img/jsm-school-photo/School Front (1).png" data-caption="JSM SR. SEC. SCHOOL — School Front">
+                    <img src="img/jsm-school-photo/School Front (1).png" alt="School Front" loading="lazy" />
+                    <div class="gallery-item-overlay">
+                        <div class="overlay-icon"><i class="fa fa-magnifying-glass-plus"></i></div>
+                        <div class="overlay-caption">School Front</div>
+                    </div>
+                    <span class="gallery-item-tag">Campus</span>
+                </a>
+
+                <a class="gallery-item" data-cat="campus" data-fancybox="gallery"
+                    href="img/jsm-school-photo/library.png" data-caption="School Library — A hub of knowledge">
+                    <img src="img/jsm-school-photo/library.png" alt="Library" loading="lazy" />
+                    <div class="gallery-item-overlay">
+                        <div class="overlay-icon"><i class="fa fa-magnifying-glass-plus"></i></div>
+                        <div class="overlay-caption">School Library</div>
+                    </div>
+                    <span class="gallery-item-tag">Campus</span>
+                </a>
+
+                <a class="gallery-item" data-cat="campus" data-fancybox="gallery"
+                    href="img/jsm-school-photo/Principal Office.png" data-caption="Principal's Office">
+                    <img src="img/jsm-school-photo/Principal Office.png" alt="Principal Office" loading="lazy" />
+                    <div class="gallery-item-overlay">
+                        <div class="overlay-icon"><i class="fa fa-magnifying-glass-plus"></i></div>
+                        <div class="overlay-caption">Principal's Office</div>
+                    </div>
+                    <span class="gallery-item-tag">Campus</span>
+                </a>
+
+                <a class="gallery-item" data-cat="campus" data-fancybox="gallery"
+                    href="img/jsm-school-photo/Principal Office 2.png"
+                    data-caption="Principal's Office — Interior View">
+                    <img src="img/jsm-school-photo/Principal Office 2.png" alt="Principal Office 2" loading="lazy" />
+                    <div class="gallery-item-overlay">
+                        <div class="overlay-icon"><i class="fa fa-magnifying-glass-plus"></i></div>
+                        <div class="overlay-caption">Principal's Office — Interior</div>
+                    </div>
+                    <span class="gallery-item-tag">Campus</span>
+                </a>
+
+                <!-- Classrooms -->
+                <a class="gallery-item" data-cat="classroom" data-fancybox="gallery"
+                    href="img/jsm-school-photo/Class Room.png" data-caption="Classroom — JSM SR. SEC. SCHOOL">
+                    <img src="img/jsm-school-photo/Class Room.png" alt="Class Room" loading="lazy" />
+                    <div class="gallery-item-overlay">
+                        <div class="overlay-icon"><i class="fa fa-magnifying-glass-plus"></i></div>
+                        <div class="overlay-caption">Classroom</div>
+                    </div>
+                    <span class="gallery-item-tag">Classrooms</span>
+                </a>
+
+                <a class="gallery-item" data-cat="classroom" data-fancybox="gallery"
+                    href="img/jsm-school-photo/Classroom 2.png" data-caption="Classroom — Students in Session">
+                    <img src="img/jsm-school-photo/Classroom 2.png" alt="Classroom 2" loading="lazy" />
+                    <div class="gallery-item-overlay">
+                        <div class="overlay-icon"><i class="fa fa-magnifying-glass-plus"></i></div>
+                        <div class="overlay-caption">Classroom — Students in Session</div>
+                    </div>
+                    <span class="gallery-item-tag">Classrooms</span>
+                </a>
+
+                <a class="gallery-item" data-cat="classroom" data-fancybox="gallery"
+                    href="img/jsm-school-photo/Classroom 3.png" data-caption="Classroom — Interactive Learning">
+                    <img src="img/jsm-school-photo/Classroom 3.png" alt="Classroom 3" loading="lazy" />
+                    <div class="gallery-item-overlay">
+                        <div class="overlay-icon"><i class="fa fa-magnifying-glass-plus"></i></div>
+                        <div class="overlay-caption">Classroom — Interactive Learning</div>
+                    </div>
+                    <span class="gallery-item-tag">Classrooms</span>
+                </a>
+
+                <a class="gallery-item" data-cat="classroom" data-fancybox="gallery"
+                    href="img/jsm-school-photo/Smart Board Class.png" data-caption="Smart Board Classroom">
+                    <img src="img/jsm-school-photo/Smart Board Class.png" alt="Smart Board Class" loading="lazy" />
+                    <div class="gallery-item-overlay">
+                        <div class="overlay-icon"><i class="fa fa-magnifying-glass-plus"></i></div>
+                        <div class="overlay-caption">Smart Board Classroom</div>
+                    </div>
+                    <span class="gallery-item-tag">Classrooms</span>
+                </a>
+
+                <a class="gallery-item" data-cat="classroom" data-fancybox="gallery"
+                    href="img/jsm-school-photo/Smart Board Class 2.png"
+                    data-caption="Smart Board Classroom — Digital Learning">
+                    <img src="img/jsm-school-photo/Smart Board Class 2.png" alt="Smart Board Class 2" loading="lazy" />
+                    <div class="gallery-item-overlay">
+                        <div class="overlay-icon"><i class="fa fa-magnifying-glass-plus"></i></div>
+                        <div class="overlay-caption">Smart Board — Digital Learning</div>
+                    </div>
+                    <span class="gallery-item-tag">Classrooms</span>
+                </a>
+
+                <!-- Labs -->
+                <a class="gallery-item" data-cat="lab" data-fancybox="gallery"
+                    href="img/jsm-school-photo/Chemistery-Lab.png" data-caption="Chemistry Laboratory">
+                    <img src="img/jsm-school-photo/Chemistery-Lab.png" alt="Chemistry Lab" loading="lazy" />
+                    <div class="gallery-item-overlay">
+                        <div class="overlay-icon"><i class="fa fa-magnifying-glass-plus"></i></div>
+                        <div class="overlay-caption">Chemistry Laboratory</div>
+                    </div>
+                    <span class="gallery-item-tag">Labs</span>
+                </a>
+
+                <a class="gallery-item" data-cat="lab" data-fancybox="gallery"
+                    href="img/jsm-school-photo/Chemistery-Lab 2.png"
+                    data-caption="Chemistry Laboratory — Practical Session">
+                    <img src="img/jsm-school-photo/Chemistery-Lab 2.png" alt="Chemistry Lab 2" loading="lazy" />
+                    <div class="gallery-item-overlay">
+                        <div class="overlay-icon"><i class="fa fa-magnifying-glass-plus"></i></div>
+                        <div class="overlay-caption">Chemistry Lab — Practical Session</div>
+                    </div>
+                    <span class="gallery-item-tag">Labs</span>
+                </a>
+
+                <a class="gallery-item" data-cat="lab" data-fancybox="gallery"
+                    href="img/jsm-school-photo/Chemistery Lab 3.png"
+                    data-caption="Chemistry Laboratory — Advanced Experiments">
+                    <img src="img/jsm-school-photo/Chemistery Lab 3.png" alt="Chemistry Lab 3" loading="lazy" />
+                    <div class="gallery-item-overlay">
+                        <div class="overlay-icon"><i class="fa fa-magnifying-glass-plus"></i></div>
+                        <div class="overlay-caption">Chemistry Lab — Advanced Experiments</div>
+                    </div>
+                    <span class="gallery-item-tag">Labs</span>
+                </a>
+
+                <a class="gallery-item" data-cat="lab" data-fancybox="gallery" href="img/jsm-school-photo/Lab.png"
+                    data-caption="Science Laboratory">
+                    <img src="img/jsm-school-photo/Lab.png" alt="Lab" loading="lazy" />
+                    <div class="gallery-item-overlay">
+                        <div class="overlay-icon"><i class="fa fa-magnifying-glass-plus"></i></div>
+                        <div class="overlay-caption">Science Laboratory</div>
+                    </div>
+                    <span class="gallery-item-tag">Labs</span>
+                </a>
+
+                <a class="gallery-item" data-cat="lab" data-fancybox="gallery" href="img/jsm-school-photo/Lab 2.png"
+                    data-caption="Science Laboratory — Student Experiments">
+                    <img src="img/jsm-school-photo/Lab 2.png" alt="Lab 2" loading="lazy" />
+                    <div class="gallery-item-overlay">
+                        <div class="overlay-icon"><i class="fa fa-magnifying-glass-plus"></i></div>
+                        <div class="overlay-caption">Science Lab — Student Experiments</div>
+                    </div>
+                    <span class="gallery-item-tag">Labs</span>
+                </a>
+
+                <!-- Assembly -->
+                <a class="gallery-item" data-cat="assembly" data-fancybox="gallery"
+                    href="img/jsm-school-photo/Assembly 1.png" data-caption="School Assembly">
+                    <img src="img/jsm-school-photo/Assembly 1.png" alt="Assembly 1" loading="lazy" />
+                    <div class="gallery-item-overlay">
+                        <div class="overlay-icon"><i class="fa fa-magnifying-glass-plus"></i></div>
+                        <div class="overlay-caption">School Assembly</div>
+                    </div>
+                    <span class="gallery-item-tag">Assembly</span>
+                </a>
+
+                <a class="gallery-item" data-cat="assembly" data-fancybox="gallery"
+                    href="img/jsm-school-photo/Assembly 2.png" data-caption="School Assembly — Morning Prayer">
+                    <img src="img/jsm-school-photo/Assembly 2.png" alt="Assembly 2" loading="lazy" />
+                    <div class="gallery-item-overlay">
+                        <div class="overlay-icon"><i class="fa fa-magnifying-glass-plus"></i></div>
+                        <div class="overlay-caption">Assembly — Morning Prayer</div>
+                    </div>
+                    <span class="gallery-item-tag">Assembly</span>
+                </a>
+
+                <a class="gallery-item" data-cat="assembly" data-fancybox="gallery"
+                    href="img/jsm-school-photo/Assembly 3.png" data-caption="School Assembly — Cultural Program">
+                    <img src="img/jsm-school-photo/Assembly 3.png" alt="Assembly 3" loading="lazy" />
+                    <div class="gallery-item-overlay">
+                        <div class="overlay-icon"><i class="fa fa-magnifying-glass-plus"></i></div>
+                        <div class="overlay-caption">Assembly — Cultural Program</div>
+                    </div>
+                    <span class="gallery-item-tag">Assembly</span>
+                </a>
+
+                <a class="gallery-item" data-cat="assembly" data-fancybox="gallery"
+                    href="img/jsm-school-photo/Assembly 5.png" data-caption="School Assembly — Annual Function">
+                    <img src="img/jsm-school-photo/Assembly 5.png" alt="Assembly 5" loading="lazy" />
+                    <div class="gallery-item-overlay">
+                        <div class="overlay-icon"><i class="fa fa-magnifying-glass-plus"></i></div>
+                        <div class="overlay-caption">Assembly — Annual Function</div>
+                    </div>
+                    <span class="gallery-item-tag">Assembly</span>
+                </a>
+
+                <a class="gallery-item" data-cat="assembly" data-fancybox="gallery"
+                    href="img/jsm-school-photo/assembly 6.png" data-caption="School Assembly — Special Event">
+                    <img src="img/jsm-school-photo/assembly 6.png" alt="Assembly 6" loading="lazy" />
+                    <div class="gallery-item-overlay">
+                        <div class="overlay-icon"><i class="fa fa-magnifying-glass-plus"></i></div>
+                        <div class="overlay-caption">Assembly — Special Event</div>
+                    </div>
+                    <span class="gallery-item-tag">Assembly</span>
+                </a>
+
+                <a class="gallery-item" data-cat="assembly" data-fancybox="gallery"
+                    href="img/jsm-school-photo/Assemble 4.png" data-caption="School Assembly — Group Activity">
+                    <img src="img/jsm-school-photo/Assemble 4.png" alt="Assemble 4" loading="lazy" />
+                    <div class="gallery-item-overlay">
+                        <div class="overlay-icon"><i class="fa fa-magnifying-glass-plus"></i></div>
+                        <div class="overlay-caption">Assembly — Group Activity</div>
+                    </div>
+                    <span class="gallery-item-tag">Assembly</span>
+                </a>
+
+                <a class="gallery-item" data-cat="assembly" data-fancybox="gallery"
+                    href="img/jsm-school-photo/Assemble 5.png" data-caption="School Assembly — Student Gathering">
+                    <img src="img/jsm-school-photo/Assemble 5.png" alt="Assemble 5" loading="lazy" />
+                    <div class="gallery-item-overlay">
+                        <div class="overlay-icon"><i class="fa fa-magnifying-glass-plus"></i></div>
+                        <div class="overlay-caption">Assembly — Student Gathering</div>
+                    </div>
+                    <span class="gallery-item-tag">Assembly</span>
+                </a>
+
+                <!-- Sports -->
+                <a class="gallery-item" data-cat="sports" data-fancybox="gallery"
+                    href="img/jsm-school-photo/Volleyball.png" data-caption="Volleyball Match — JSM SR. SEC. SCHOOL">
+                    <img src="img/jsm-school-photo/Volleyball.png" alt="Volleyball" loading="lazy" />
+                    <div class="gallery-item-overlay">
+                        <div class="overlay-icon"><i class="fa fa-magnifying-glass-plus"></i></div>
+                        <div class="overlay-caption">Volleyball Match</div>
+                    </div>
+                    <span class="gallery-item-tag">Sports</span>
+                </a>
+
+                <a class="gallery-item" data-cat="sports" data-fancybox="gallery"
+                    href="img/jsm-school-photo/Volleyball 2.png" data-caption="Volleyball Tournament — Semifinal">
+                    <img src="img/jsm-school-photo/Volleyball 2.png" alt="Volleyball 2" loading="lazy" />
+                    <div class="gallery-item-overlay">
+                        <div class="overlay-icon"><i class="fa fa-magnifying-glass-plus"></i></div>
+                        <div class="overlay-caption">Volleyball Tournament — Semifinal</div>
+                    </div>
+                    <span class="gallery-item-tag">Sports</span>
+                </a>
+
+                <a class="gallery-item" data-cat="sports" data-fancybox="gallery"
+                    href="img/jsm-school-photo/Volleyball 3.png" data-caption="Volleyball Tournament — Action Shot">
+                    <img src="img/jsm-school-photo/Volleyball 3.png" alt="Volleyball 3" loading="lazy" />
+                    <div class="gallery-item-overlay">
+                        <div class="overlay-icon"><i class="fa fa-magnifying-glass-plus"></i></div>
+                        <div class="overlay-caption">Volleyball Tournament — Action Shot</div>
+                    </div>
+                    <span class="gallery-item-tag">Sports</span>
+                </a>
+
+                <a class="gallery-item" data-cat="sports" data-fancybox="gallery"
+                    href="img/jsm-school-photo/Volleyball 4.png" data-caption="Volleyball Championship — Final Round">
+                    <img src="img/jsm-school-photo/Volleyball 4.png" alt="Volleyball 4" loading="lazy" />
+                    <div class="gallery-item-overlay">
+                        <div class="overlay-icon"><i class="fa fa-magnifying-glass-plus"></i></div>
+                        <div class="overlay-caption">Volleyball Championship — Final</div>
+                    </div>
+                    <span class="gallery-item-tag">Sports</span>
+                </a>
+
+                <!-- Staff -->
+                <a class="gallery-item" data-cat="staff" data-fancybox="gallery"
+                    href="img/jsm-school-photo/All-Teachers.png" data-caption="Our Dedicated Teaching Staff">
+                    <img src="img/jsm-school-photo/All-Teachers.png" alt="All Teachers" loading="lazy" />
+                    <div class="gallery-item-overlay">
+                        <div class="overlay-icon"><i class="fa fa-magnifying-glass-plus"></i></div>
+                        <div class="overlay-caption">Our Teaching Staff</div>
+                    </div>
+                    <span class="gallery-item-tag">Staff</span>
+                </a>
+
+                <a class="gallery-item" data-cat="staff" data-fancybox="gallery" href="img/jsm-school-photo/Sir 1.png"
+                    data-caption="Faculty Member — JSM SR. SEC. SCHOOL">
+                    <img src="img/jsm-school-photo/Sir 1.png" alt="Sir 1" loading="lazy" />
+                    <div class="gallery-item-overlay">
+                        <div class="overlay-icon"><i class="fa fa-magnifying-glass-plus"></i></div>
+                        <div class="overlay-caption">Faculty Member</div>
+                    </div>
+                    <span class="gallery-item-tag">Staff</span>
+                </a>
+
+                <a class="gallery-item" data-cat="staff" data-fancybox="gallery"
+                    href="img/jsm-school-photo/ChatGPT Image Feb 25, 2026, 01_10_41 PM.png"
+                    data-caption="JSM SR. SEC. SCHOOL">
+                    <img src="img/jsm-school-photo/ChatGPT Image Feb 25, 2026, 01_10_41 PM.png" alt="School"
+                        loading="lazy" />
+                    <div class="gallery-item-overlay">
+                        <div class="overlay-icon"><i class="fa fa-magnifying-glass-plus"></i></div>
+                        <div class="overlay-caption">JSM SR. SEC. SCHOOL</div>
+                    </div>
+                    <span class="gallery-item-tag">Campus</span>
+                </a>
+
+                <a class="gallery-item" data-cat="campus" data-fancybox="gallery"
+                    href="img/jsm-school-photo/ChatGPT Image Feb 25, 2026, 01_53_19 PM.png"
+                    data-caption="JSM SR. SEC. SCHOOL — Campus View">
+                    <img src="img/jsm-school-photo/ChatGPT Image Feb 25, 2026, 01_53_19 PM.png" alt="Campus View"
+                        loading="lazy" />
+                    <div class="gallery-item-overlay">
+                        <div class="overlay-icon"><i class="fa fa-magnifying-glass-plus"></i></div>
+                        <div class="overlay-caption">Campus View</div>
+                    </div>
+                    <span class="gallery-item-tag">Campus</span>
+                </a>
+
+                <a class="gallery-item" data-cat="campus" data-fancybox="gallery"
+                    href="img/jsm-school-photo/ChatGPT Image Feb 25, 2026, 02_03_11 PM.png"
+                    data-caption="JSM SR. SEC. SCHOOL — School Life">
+                    <img src="img/jsm-school-photo/ChatGPT Image Feb 25, 2026, 02_03_11 PM.png" alt="School Life"
+                        loading="lazy" />
+                    <div class="gallery-item-overlay">
+                        <div class="overlay-icon"><i class="fa fa-magnifying-glass-plus"></i></div>
+                        <div class="overlay-caption">School Life</div>
+                    </div>
+                    <span class="gallery-item-tag">Campus</span>
+                </a>
+
+            </div>
+
+            <!-- Load More -->
+            <div class="load-more-wrap">
+                <button class="btn-load-more" id="loadMoreBtn">
+                    <i class="fa fa-images"></i> Load More Photos
+                </button>
+            </div>
+
+        </div>
+    </section>
+
+
+    <div class="cta-card bg-light">
+        <img src="img/newslater-img-02.jpg" alt="Apply for Admission" class="cta-card-img" />
+        <div class="cta-card-body">
+            <h2 class="cta-card-title">Apply for <span class="underline-accent">admission?</span></h2>
+            <p class="cta-card-text">
+                A place to provide students with enough knowledge and skills in a
+                complex world. Are you looking for exceptional education experience?
+                JSM SR. SEC. SCHOOL might be the place for you.
+            </p>
+            <div class="cta-email-form">
+                <input type="email" class="cta-email-input" placeholder="Email Address..." />
+                <button class="cta-subscribe-btn">
+                    Subscribe <i class="fa fa-arrow-up-right-from-square" style="font-size:0.75rem;"></i>
+                </button>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- Main Footer -->
+    <footer class="main-footer">
+        <div class="container footer-inner">
+            <div class="row g-5 align-items-start">
+                <div class="col-lg-3 col-md-6">
+                    <div class="footer-col-title">About Us<span class="dot">.</span></div>
+                    <p class="footer-brand-desc">
+                        The residential semester takes place at a specially designed campus,
+                        which provides a support system that aids students in becoming
+                        confident and self-reliant.
+                    </p>
+                    <div class="footer-socials">
+                        <a href="#" class="footer-social-btn"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="footer-social-btn"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="footer-social-btn"><i class="fab fa-x-twitter"></i></a>
+                        <a href="#" class="footer-social-btn"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-6">
+                    <div class="footer-col-title">Essential<span class="dot">.</span></div>
+                    <ul class="footer-links">
+                        <li><a href="#">About Us</a></li>
+                        <li><a href="#">Our Team</a></li>
+                        <li><a href="#">What We Do</a></li>
+                        <li><a href="#">Pricing Plans</a></li>
+                        <li><a href="#">FAQ</a></li>
+                        <li><a href="#">Contact Us</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <div class="footer-col-title">Programs<span class="dot">.</span></div>
+                    <ul class="footer-links footer-links-2col">
+                        <li><a href="#">Science</a></li>
+                        <li><a href="#">Careers</a></li>
+                        <li><a href="#">Commerce</a></li>
+                        <li><a href="#">Prototype</a></li>
+                        <li><a href="#">Arts &amp; Design</a></li>
+                        <li><a href="#">Refund Policy</a></li>
+                        <li><a href="#">Robotics</a></li>
+                        <li><a href="#">How It Works</a></li>
+                        <li><a href="#">Game Design</a></li>
+                        <li><a href="#">Fashion Dev</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="footer-col-title">Get in touch<span class="dot">.</span></div>
+                    <div class="footer-contact-item">
+                        <div class="footer-contact-icon"><i class="fa fa-phone"></i></div>
+                        <div>
+                            <span class="footer-contact-value">+91 7206045720</span>
+                            <span class="footer-contact-label">Phone number</span>
+                        </div>
+                    </div>
+                    <div class="footer-contact-item">
+                        <div class="footer-contact-icon"><i class="fa fa-envelope"></i></div>
+                        <div>
+                            <span class="footer-contact-value">info@university.edu</span>
+                            <span class="footer-contact-label">Email address</span>
+                        </div>
+                    </div>
+                    <div class="footer-contact-item">
+                        <div class="footer-contact-icon"><i class="fa fa-location-dot"></i></div>
+                        <div>
+                            <span class="footer-contact-value">Campus Address, City</span>
+                            <span class="footer-contact-label">JSM SR. SEC. SCHOOL</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="footer-bottom">
+                <a href="#" class="footer-bottom-brand">
+                    <div class="footer-bottom-logo"><i class="fa fa-university"></i></div>
+                    <span class="footer-bottom-name">JSM SR. SEC. SCHOOL.</span>
+                </a>
+                <p class="footer-copyright mb-0">
+                    Copyright & Design & Developed By &copy;
+                    <a href="https://brandingwaale.com/" target="_blank" class="highlight-brand">
+                        Brandingwaale Webtech
+                    </a>,
+                    All rights reserved
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js"></script>
+    <script src="script.js"></script>
+
+    <script>
+        // ─── Fancybox init ───
+        $('[data-fancybox="gallery"]').fancybox({
+            animationEffect: "zoom-in-out",
+            transitionEffect: "slide",
+            buttons: ["zoom", "slideShow", "fullScreen", "download", "thumbs", "close"],
+            loop: true,
+            protect: false,
+            thumbs: { autoStart: true, axis: "x" }
+        });
+
+        // ─── Filter ───
+        document.querySelectorAll('.gf-btn').forEach(btn => {
+            btn.addEventListener('click', function () {
+                document.querySelectorAll('.gf-btn').forEach(b => b.classList.remove('active'));
+                this.classList.add('active');
+
+                const filter = this.dataset.filter;
+                const items = document.querySelectorAll('.gallery-item');
+
+                items.forEach(item => {
+                    if (filter === 'all' || item.dataset.cat === filter) {
+                        item.style.display = 'block';
+                        item.style.animation = 'fadeUp 0.4s ease both';
+                    } else {
+                        item.style.display = 'none';
+                    }
+                });
+
+                // Re-init fancybox after filter
+                $('[data-fancybox="gallery"]').fancybox({
+                    animationEffect: "zoom-in-out",
+                    transitionEffect: "slide",
+                    buttons: ["zoom", "slideShow", "fullScreen", "download", "thumbs", "close"],
+                    loop: true,
+                    thumbs: { autoStart: true, axis: "x" }
+                });
+            });
+        });
+
+        // ─── Load More (mock) ───
+        document.getElementById('loadMoreBtn').addEventListener('click', function () {
+            this.innerHTML = '<i class="fa fa-spinner fa-spin"></i> Loading...';
+            this.disabled = true;
+            setTimeout(() => {
+                this.innerHTML = '<i class="fa fa-check"></i> All Photos Loaded';
+                this.style.opacity = '0.5';
+                this.style.cursor = 'default';
+            }, 1400);
+        });
+    </script>
+</body>
+
+</html>

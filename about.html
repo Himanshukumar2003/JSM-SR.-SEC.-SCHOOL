@@ -1,0 +1,773 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Academics </title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,800;1,400&family=Source+Sans+3:wght@300;400;600&display=swap"
+        rel="stylesheet" />
+
+    <!-- AOS CSS -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" rel="stylesheet" />
+
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+
+    <div class="nav">
+        <!-- Top Bar -->
+        <div class="top-bar">
+            <div class="container">
+                <div class="top-bar-content">
+                    <div class="top-bar-left">
+                        <a href="tel:+917206045720" class="top-bar-item">
+                            <i class="fa fa-phone"></i>
+                            <span>+91 7206045720-21,22,23,24</span>
+                        </a>
+                        <a href="mailto:info@university.edu" class="top-bar-item">
+                            <i class="fa fa-envelope"></i>
+                            <span>info@university.edu</span>
+                        </a>
+                        <div class="top-bar-item">
+                            <i class="fa fa-location-dot"></i>
+                            <span>Campus Address, City</span>
+                        </div>
+                    </div>
+                    <div class="top-bar-right">
+                        <a href="#" class="top-social-btn"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="top-social-btn"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="top-social-btn"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#" class="top-social-btn"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Main Navbar -->
+        <div class="navbar-section" id="navbarSection">
+            <nav class="main-nav">
+                <div class="container d-flex align-items-center justify-content-between">
+                    <!-- Logo (Left) -->
+                    <a href="index.html" class="navbar-brand">
+                        <img src="img/logo.png" alt="Logo" class="logo" />
+                    </a>
+
+                    <!-- Nav Links (Center) -->
+                    <ul class="nav-center">
+                        <li><a href="index.html" class="active">Home</a></li>
+
+                        <!-- About us Dropdown -->
+                        <li>
+                            <a href="#"> About us <i class="fa fa-chevron-down"></i> </a>
+                            <div class="dropdown-menu-custom">
+                                <a href="about.html">About</a>
+                                <a href="vision-mission.html">Our Vision & Mission</a>
+                                <a href="chairman-message.html">Chairman Message</a>
+                                <a href="principal-message.html">Principal Message</a>
+                            </div>
+                        </li>
+
+                        <!-- Admission Dropdown -->
+                        <li>
+                            <a href="#"> Admission <i class="fa fa-chevron-down"></i> </a>
+                            <div class="dropdown-menu-custom">
+                                <a href="admission-information.html">Admission Information</a>
+                                <a href="#">Download Registration Form</a>
+                                <a href="admission-process.html">Admission Process</a>
+                                <a href="#">Admission Schedule</a>
+                                <a href="#">Medical Information Form</a>
+                                <a href="new-register.html">Online Registration</a>
+                            </div>
+                        </li>
+
+                        <!-- Our Campus Dropdown -->
+                        <li>
+                            <a href="#"> Our Campus <i class="fa fa-chevron-down"></i> </a>
+                            <div class="dropdown-menu-custom">
+                                <a href="campus.html">Campus</a>
+                                <a href="language-lab.html">Language Lab</a>
+                                <a href="medical-room.html">Medical Room</a>
+                                <a href="science-lab.html">Science Lab</a>
+                                <a href="smart-classes.html">Smart Classes</a>
+                                <a href="school-library.html">School Library</a>
+                                <a href="school-transport.html">School Transport</a>
+                                <a href="counselling-area.html">Counselling Area</a>
+                                <a href="ongoing-classes.html">Ongoing Classes</a>
+                                <a href="house-system.html">House System</a>
+                            </div>
+                        </li>
+
+                        <!-- Academics Dropdown -->
+                        <li>
+                            <a href="#"> Academics <i class="fa fa-chevron-down"></i> </a>
+                            <div class="dropdown-menu-custom">
+                                <a href="#">Programs</a>
+                                <a href="#">Faculty</a>
+                                <a href="#">Academic Calendar</a>
+                                <a href="#">Departments</a>
+                            </div>
+                        </li>
+
+                        <!-- Gallery Dropdown -->
+                        <li>
+                            <a href="#"> Gallery <i class="fa fa-chevron-down"></i> </a>
+                            <div class="dropdown-menu-custom">
+                                <a href="photo-gallery.html">Photo Gallery</a>
+                                <a href="video-gallery.html">Video Gallery</a>
+                                <a href="events-and-celebrations.html">Events and Celebrations</a>
+                            </div>
+                        </li>
+
+                        <li><a href="blog.html">Blogs</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+
+                    <!-- Apply Now Button (Right) -->
+                    <div class="d-none d-lg-inline">
+                        <button class="btn-apply">
+                            <i class="fa fa-paper-plane"></i>
+                            <span>Apply Now</span>
+                        </button>
+                    </div>
+                    <!-- Mobile Menu Button -->
+                    <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Toggle menu">
+                        <span class="menu-icon"></span>
+                    </button>
+                </div>
+            </nav>
+        </div>
+    </div>
+
+    <!-- ═══ MOBILE NAV OVERLAY ═══ -->
+    <div class="mobile-nav-overlay" id="mobileOverlay"></div>
+
+    <!-- ═══ MOBILE NAV PANEL ═══ -->
+    <div class="mobile-nav" id="mobileNav">
+        <div class="mobile-nav-header">
+            <a href="index.html" class="navbar-brand">
+                <img src="img/logo.png" alt="Logo" class="logo" />
+            </a>
+
+            <button class="mobile-nav-close" id="mobileNavClose">
+                <i class="fa fa-times"></i>
+            </button>
+        </div>
+
+        <div class="mobile-nav-body">
+            <ul class="mobile-nav-links">
+                <li><a href="index.html" class="active">Home</a></li>
+
+                <!-- About us Mobile Dropdown -->
+                <li>
+                    <a href="#" class="mobile-dropdown-toggle">
+                        About us <i class="fa fa-chevron-down"></i>
+                    </a>
+                    <div class="mobile-dropdown">
+                        <a href="about.html">About</a>
+                        <a href="vision-mission.html">Our Vision & Mission</a>
+                        <a href="chairman-message.html">Chairman Message</a>
+                        <a href="principal-message.html">Principal Message</a>
+                    </div>
+                </li>
+
+                <!-- Admission Mobile Dropdown -->
+                <li>
+                    <a href="#" class="mobile-dropdown-toggle">
+                        Admission <i class="fa fa-chevron-down"></i>
+                    </a>
+                    <div class="mobile-dropdown">
+                        <a href="admission-information.html">Admission Information</a>
+                        <a href="#">Download Registration Form</a>
+                        <a href="admission-process.html">Admission Process</a>
+                        <a href="#">Admission Schedule</a>
+                        <a href="#">Medical Information Form</a>
+                        <a href="new-register.html">Online Registration</a>
+                    </div>
+                </li>
+
+                <!-- Our Campus Mobile Dropdown -->
+                <li>
+                    <a href="#" class="mobile-dropdown-toggle">
+                        Our Campus <i class="fa fa-chevron-down"></i>
+                    </a>
+                    <div class="mobile-dropdown">
+                        <a href="campus.html">Campus</a>
+                        <a href="language-lab.html">Language Lab</a>
+                        <a href="medical-room.html">Medical Room</a>
+                        <a href="science-lab.html">Science Lab</a>
+                        <a href="smart-classes.html">Smart Classes</a>
+                        <a href="school-library.html">School Library</a>
+                        <a href="school-transport.html">School Transport</a>
+                        <a href="counselling-area.html">Counselling Area</a>
+                        <a href="ongoing-classes.html">Ongoing Classes</a>
+                        <a href="house-system.html">House System</a>
+                    </div>
+                </li>
+
+                <!-- Academics Mobile Dropdown -->
+                <li>
+                    <a href="#" class="mobile-dropdown-toggle">
+                        Academics <i class="fa fa-chevron-down"></i>
+                    </a>
+                    <div class="mobile-dropdown">
+                        <a href="#">Programs</a>
+                        <a href="#">Faculty</a>
+                        <a href="#">Academic Calendar</a>
+                        <a href="#">Departments</a>
+                    </div>
+                </li>
+
+                <!-- Gallery Mobile Dropdown -->
+                <li>
+                    <a href="#" class="mobile-dropdown-toggle">
+                        Gallery <i class="fa fa-chevron-down"></i>
+                    </a>
+                    <div class="mobile-dropdown">
+                        <a href="photo-gallery.html">Photo Gallery</a>
+                        <a href="video-gallery.html">Video Gallery</a>
+                        <a href="events-and-celebrations.html">Events and Celebrations</a>
+                    </div>
+                </li>
+
+                <li><a href="blog.html">Blogs</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </div>
+
+        <div class="mobile-nav-footer">
+            <a href="new-register.html" class="mobile-nav-cta">
+                <i class="fa fa-paper-plane"></i> Apply Now
+            </a>
+        </div>
+    </div>
+
+
+    <!-- ─── PAGE HERO WITH BREADCRUMB ─── -->
+    <section class="page-hero">
+        <div class="page-hero-bg"></div>
+        <div class="page-hero-overlay"></div>
+        <div class="container page-hero-content">
+            <div class="page-hero-inner">
+                <!-- Breadcrumb -->
+                <div class="breadcrumb-trail" data-aos="fade-down" data-aos-duration="800">
+                    <a href="JSM SR. SEC. SCHOOL-university.html"><i class="fa fa-house me-1"></i> Home</a>
+                    <span class="sep"><i class="fa fa-chevron-right" style="font-size:0.6rem;"></i></span>
+                    <span class="current">Academics</span>
+                </div>
+                <h1 class="page-title" data-aos="fade-up" data-aos-duration="900" data-aos-delay="100">Academics</h1>
+                <p class="page-subtitle" data-aos="fade-up" data-aos-duration="900" data-aos-delay="250">
+                    JSM SR. SEC. SCHOOL offers a wide range of innovative academic programs designed to equip
+                    students with the knowledge, skills, and experiences needed to succeed in a rapidly
+                    changing world from undergraduate to postgraduate levels.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <section class="about-section about-us bg-light">
+        <div class="container">
+            <div class="row  align-items-center g-5">
+
+                <!-- LEFT: Text Content -->
+                <div class="col-lg-6" data-aos="fade-right" data-aos-duration="1000">
+
+                    <h2 class="about-headline">A friendly place to<br>learn &amp; grow together</h2>
+                    <p>
+                        We deliver premium-quality education through personalised coaching,
+                        modern facilities &amp; advanced research-focused training methods
+                        that prepare you for a rapidly evolving world.
+                        We deliver premium-quality education through personalised coaching, modern facilities & advanced
+                        research-focused training methods that prepare you for a rapidly evolving world.
+
+                        We deliver premium-quality education through personalised coaching, modern facilities & advanced
+                        research-focused training methods that prepare you for a rapidly evolving world.
+
+                        We deliver premium-quality education through personalised coaching, modern facilities & advanced
+                        research-focused training methods that prepare you for a rapidly evolving world.
+
+                        We deliver premium-quality education through personalised coaching, modern facilities & advanced
+                        research-focused training methods that prepare you for a rapidly evolving world.
+                    </p>
+
+                    <p>
+                        We deliver premium-quality education through personalised coaching,
+                        modern facilities &amp; advanced research-focused training methods
+                        that prepare you for a rapidly evolving world.
+                        We deliver premium-quality education through personalised coaching, modern facilities & advanced
+                        research-focused training methods that prepare you for a rapidly evolving world.
+                    </p>
+
+                </div>
+
+                <div class="col-lg-6 about-img-col" data-aos="zoom-in" data-aos-duration="1000" data-aos-delay="200">
+                    <img src="img/teacher.jpeg" alt="Students at JSM SR. SEC. SCHOOL" class="  rounded-4  " />
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+
+    <section class="mission-section">
+        <div class="container">
+            <h2 class="mission-title" data-aos="fade-up" data-aos-duration="800">Mission and Values</h2>
+
+            <div class="mission-layout">
+
+                <!-- LEFT COLUMN -->
+                <div class="mission-col-left">
+
+                    <!-- Diversity -->
+                    <div class="mission-value" data-aos="fade-right" data-aos-duration="900" data-aos-delay="100">
+                        <div class="mission-value-header">
+                            <span class="mission-value-name">Diversity</span>
+                            <span class="mission-connector"></span>
+                        </div>
+                        <p class="mission-value-desc">
+                            Celebrating a rich tapestry of backgrounds,<br>perspectives, and talents
+                        </p>
+                        <div class="mission-img-wrap">
+                            <img src="img/school.png" alt="Diversity" class="mission-value-img" />
+                        </div>
+                    </div>
+
+                    <!-- Innovation -->
+                    <div class="mission-value" data-aos="fade-right" data-aos-duration="900" data-aos-delay="300">
+                        <div class="mission-value-header">
+                            <span class="mission-value-name">Innovation</span>
+                            <span class="mission-connector"></span>
+                        </div>
+                        <p class="mission-value-desc">
+                            Encouraging creativity, critical thinking,<br>and a spirit of innovation.
+                        </p>
+                        <div class="mission-img-wrap">
+                            <img src="img/science-lab.jpeg" alt="Innovation" class="mission-value-img" />
+                        </div>
+                    </div>
+
+                </div>
+
+                <!-- CENTER DIVIDER -->
+                <div class="mission-divider" data-aos="fade-up" data-aos-duration="1000"></div>
+
+                <!-- RIGHT COLUMN -->
+                <div class="mission-col-right">
+
+                    <!-- Excellence -->
+                    <div class="mission-value" data-aos="fade-left" data-aos-duration="900" data-aos-delay="200">
+                        <div class="mission-value-header">
+                            <span class="mission-connector"></span>
+                            <span class="mission-value-name">Excellence</span>
+                        </div>
+                        <p class="mission-value-desc">
+                            Striving for academic and research<br>excellence in all endeavors.
+                        </p>
+                        <div class="mission-img-wrap">
+                            <img src="img/Lab.jpeg" alt="Excellence" class="mission-value-img" />
+                        </div>
+                    </div>
+
+                    <!-- Academic Excellence -->
+                    <div class="mission-value" data-aos="fade-left" data-aos-duration="900" data-aos-delay="400">
+                        <div class="mission-value-header">
+                            <span class="mission-connector"></span>
+                            <span class="mission-value-name">Academic Excellence</span>
+                        </div>
+                        <p class="mission-value-desc">
+                            Our commitment to academic excellence is<br>reflected in the diverse range
+                        </p>
+                        <div class="mission-img-wrap">
+                            <img src="img/Excellence.jpeg" alt="Academic Excellence" class="mission-value-img" />
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <section class="campus-tour-section bg-light">
+        <div class="container">
+            <h2 class="campus-tour-title" data-aos="fade-up" data-aos-duration="800">Our Campus Tour</h2>
+
+            <!-- Video Thumbnail with Play Button -->
+            <div class="video-wrapper" id="videoWrapper" data-aos="zoom-in" data-aos-duration="1000"
+                data-aos-delay="150">
+                <img src="https://images.unsplash.com/photo-1541339907198-e08756dedf3f?q=80&w=1200&auto=format&fit=crop"
+                    alt="Campus Tour" class="video-thumb" />
+                <div class="video-overlay"></div>
+                <div class="play-btn">
+                    <i class="fa fa-play"></i>
+                </div>
+            </div>
+
+            <!-- Description -->
+            <p class="campus-tour-desc" data-aos="fade-up" data-aos-duration="800" data-aos-delay="200">
+                Embark on a journey of knowledge, discovery, and growth at JSM SR. SEC. SCHOOL.
+                Our admissions process is designed to identify bright, motivated individuals
+                who are eager to contribute to our dynamic academic community. Whether you're
+                a recent high school graduate or a transfer student seeking a new academic
+                home, we invite you to explore the possibilities that await you.
+            </p>
+
+            <a href="#" class="campus-visit-link" data-aos="fade-up" data-aos-duration="800" data-aos-delay="300">
+                Visit Campus <i class="fa fa-arrow-up-right-from-square" style="font-size:0.8rem;"></i>
+            </a>
+        </div>
+    </section>
+
+
+
+    <!-- ─── PROGRAMS GRID ─── -->
+    <section class="programs-section bg-light">
+        <div class="container">
+
+            <!-- Section Heading -->
+            <div class="row align-items-center g-5 mb-5">
+                <div class="col-lg-6" data-aos="fade-right" data-aos-duration="900">
+                    <h2 class="section-headline">
+                        Academic Programs
+                    </h2>
+                </div>
+                <div class="col-lg-6" data-aos="fade-left" data-aos-duration="900" data-aos-delay="150">
+                    <p class="section-body">
+                        We offer a comprehensive academic journey from foundational early education
+                        to senior secondary level, ensuring holistic growth and excellence.
+                    </p>
+                </div>
+            </div>
+
+            <div class="programs-grid">
+                <!-- Early Years (Nursery, LKG & UKG) -->
+                <div class="program-card" data-aos="fade-up" data-aos-delay="100">
+                    <div class="program-card-body">
+                        <div class="program-card-title">Early Years (Nursery, LKG & UKG)</div>
+                        <p class="program-card-desc">
+                            A warm, safe, and joyful environment focused on building strong foundational
+                            skills through play-way and activity-based learning methods.
+                        </p>
+                    </div>
+                    <div class="program-card-divider"></div>
+                    <ul class="program-card-list">
+                        <li>Play-based & experiential learning</li>
+                        <li>Development of communication & motor skills</li>
+                        <!-- <li>Social and emotional growth focus</li> -->
+                    </ul>
+                    <div class="program-card-img-wrap">
+                        <img src="img/Primary.jpeg" alt="Early Years" class="program-card-img" />
+                        <div class="program-card-icon">
+                            <i class="fa fa-child"></i>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Primary -->
+                <div class="program-card" data-aos="fade-up" data-aos-delay="250">
+                    <div class="program-card-body">
+                        <div class="program-card-title">Primary (Class 1–5)</div>
+                        <p class="program-card-desc">
+                            Building strong academic foundations with interactive and
+                            concept-based teaching methods.
+                        </p>
+                    </div>
+                    <div class="program-card-divider"></div>
+                    <ul class="program-card-list">
+                        <li>Concept clarity focus</li>
+                        <li>Creative classroom activities</li>
+                    </ul>
+                    <div class="program-card-img-wrap">
+                        <img src="img/ongoing-classes.jpeg" alt="Primary" class="program-card-img" />
+                        <div class="program-card-icon"><i class="fa fa-book"></i></div>
+                    </div>
+                </div>
+
+                <!-- Middle -->
+                <div class="program-card" data-aos="fade-up" data-aos-delay="300">
+                    <div class="program-card-body">
+                        <div class="program-card-title">Middle School (Class 6–8)</div>
+                        <p class="program-card-desc">
+                            Developing analytical thinking and subject depth through
+                            practical and project-based learning.
+                        </p>
+                    </div>
+                    <div class="program-card-divider"></div>
+                    <ul class="program-card-list">
+                        <li>Lab & practical exposure</li>
+                        <li>Skill development focus</li>
+                    </ul>
+                    <div class="program-card-img-wrap">
+                        <img src="img/Middle-class.jpeg" alt="Middle School" class="program-card-img" />
+                        <div class="program-card-icon"><i class="fa fa-lightbulb"></i></div>
+                    </div>
+                </div>
+
+                <!-- Secondary -->
+                <div class="program-card" data-aos="fade-up" data-aos-delay="350">
+                    <div class="program-card-body">
+                        <div class="program-card-title">Secondary (Class 9–10)</div>
+                        <p class="program-card-desc">
+                            Focused academic preparation with strong emphasis on board
+                            examination readiness and career awareness.
+                        </p>
+                    </div>
+                    <div class="program-card-divider"></div>
+                    <ul class="program-card-list">
+                        <li>Board exam preparation</li>
+                        <li>Regular assessments</li>
+                    </ul>
+                    <div class="program-card-img-wrap">
+                        <img src="img/Classroom.jpeg" alt="Secondary" class="program-card-img" />
+                        <div class="program-card-icon"><i class="fa fa-graduation-cap"></i></div>
+                    </div>
+                </div>
+
+                <!-- Senior Secondary -->
+                <div class="program-card" data-aos="fade-up" data-aos-delay="400">
+                    <div class="program-card-body">
+                        <div class="program-card-title">Senior Secondary (Class 11–12)</div>
+                        <p class="program-card-desc">
+                            Specialized streams in Science, Commerce, and Arts to prepare
+                            students for higher education and competitive exams.
+                        </p>
+                    </div>
+                    <div class="program-card-divider"></div>
+                    <ul class="program-card-list">
+                        <li>Stream-based specialization</li>
+                        <li>Career guidance support</li>
+                    </ul>
+                    <div class="program-card-img-wrap">
+                        <img src="img/Lab.jpeg" alt="Senior Secondary" class="program-card-img" />
+                        <div class="program-card-icon"><i class="fa fa-university"></i></div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+
+    <!-- ─── FACULTY HIGHLIGHT ─── -->
+    <section class="faculty-section">
+        <div class="container">
+            <div class="text-center mb-5" data-aos="fade-up" data-aos-duration="800">
+                <h2 class="section-headline mt-2">Our Distinguished <em>Faculty</em></h2>
+            </div>
+            <div class="row g-4 justify-content-center">
+
+                <div class="col-6 col-md-3" data-aos="fade-up" data-aos-duration="800" data-aos-delay="100">
+                    <div class="faculty-card">
+                        <div class="faculty-img-wrap">
+                            <img src="https://images.unsplash.com/photo-1568602471122-7832951cc4c5?q=80&w=200&auto=format&fit=crop&face"
+                                alt="Faculty" class="faculty-img" />
+                            <div class="faculty-badge"><i class="fa fa-star"></i></div>
+                        </div>
+                        <div class="faculty-name">Dr. James Carter</div>
+                        <div class="faculty-role">Head of Research</div>
+                        <div class="faculty-dept">Join thousands of students shaping their future at JSM SR. SEC.
+                            SCHOOL.
+                            Applications are open for the 2025–2026 academic year.
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-6 col-md-3" data-aos="fade-up" data-aos-duration="800" data-aos-delay="200">
+                    <div class="faculty-card">
+                        <div class="faculty-img-wrap">
+                            <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?q=80&w=200&auto=format&fit=crop&face"
+                                alt="Faculty" class="faculty-img" />
+                            <div class="faculty-badge"><i class="fa fa-star"></i></div>
+                        </div>
+                        <div class="faculty-name">Prof. Sarah Ahmed</div>
+                        <div class="faculty-role">Dean of Arts</div>
+                        <div class="faculty-dept">Join thousands of students shaping their future at JSM SR. SEC.
+                            SCHOOL.
+                            Applications are open for the 2025–2026 academic year.
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-6 col-md-3" data-aos="fade-up" data-aos-duration="800" data-aos-delay="300">
+                    <div class="faculty-card">
+                        <div class="faculty-img-wrap">
+                            <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?q=80&w=200&auto=format&fit=crop&face"
+                                alt="Faculty" class="faculty-img" />
+                            <div class="faculty-badge"><i class="fa fa-star"></i></div>
+                        </div>
+                        <div class="faculty-name">Dr. Michael Ross</div>
+                        <div class="faculty-role">Professor of Engineering</div>
+                        <div class="faculty-dept">Join thousands of students shaping their future at JSM SR. SEC.
+                            SCHOOL.
+                            Applications are open for the 2025–2026 academic year.
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <section class="cta-banner">
+        <div class="container">
+            <div class="row align-items-center g-4">
+                <div class="col-lg-7" data-aos="fade-right" data-aos-duration="900">
+                    <h2 class="cta-banner-title">Ready to Begin Your Academic Journey?</h2>
+                    <p class="cta-banner-sub">
+                        Join thousands of students shaping their future at JSM SR. SEC. SCHOOL.
+                        Applications are open for the 2025–2026 academic year.
+                    </p>
+                </div>
+                <div class="col-lg-5 d-flex gap-3 justify-content-lg-end flex-wrap" data-aos="fade-left"
+                    data-aos-duration="900" data-aos-delay="150">
+                    <a href="#" class="btn-cta-white">Apply Now <i class="fa fa-arrow-right"></i></a>
+                    <a href="#" class="btn-cta-outline">Learn More</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <div class="cta-card bg-light">
+            <img src="img/Classroom.jpeg" alt="Apply for Admission" class="cta-card-img" data-aos="fade-right"
+                data-aos-duration="1000" />
+            <div class="cta-card-body" data-aos="fade-left" data-aos-duration="1000" data-aos-delay="200">
+                <h2 class="cta-card-title">Apply for <span class="underline-accent">admission?</span></h2>
+                <p class="cta-card-text">
+                    A place to provide students with enough knowledge and skills in a
+                    complex world. Are you looking for exceptional education experience?
+                    JSM SR. SEC. SCHOOL might be the place for you.
+                </p>
+                <div class="cta-email-form">
+                    <input type="email" class="cta-email-input" placeholder="Email Address..." />
+                    <button class="cta-subscribe-btn">
+                        Subscribe <i class="fa fa-arrow-up-right-from-square" style="font-size:0.75rem;"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+
+        <!-- Main Footer -->
+        <footer class="main-footer">
+            <div class="container ">
+                <div class="row g-5   align-items-start">
+
+                    <!-- About -->
+                    <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-duration="800" data-aos-delay="100">
+                        <div class="footer-col-title">About Us<span class="dot">.</span></div>
+                        <p class="footer-brand-desc">
+                            The residential semester takes place at a specially designed campus,
+                            which provides a support system that aids students in becoming
+                            confident and self-reliant.
+                        </p>
+                        <div class="footer-socials">
+                            <a href="#" class="footer-social-btn"><i class="fab fa-facebook-f"></i></a>
+                            <a href="#" class="footer-social-btn"><i class="fab fa-instagram"></i></a>
+                            <a href="#" class="footer-social-btn"><i class="fab fa-x-twitter"></i></a>
+                            <a href="#" class="footer-social-btn"><i class="fab fa-youtube"></i></a>
+                        </div>
+                    </div>
+
+                    <!-- Essential -->
+                    <div class="col-lg-2 col-md-6" data-aos="fade-up" data-aos-duration="800" data-aos-delay="200">
+                        <div class="footer-col-title">Essential<span class="dot">.</span></div>
+                        <ul class="footer-links">
+                            <li><a href="about.html">About Us</a></li>
+                            <li><a href="#">Our Team</a></li>
+                            <li><a href="#">What We Do</a></li>
+                            <li><a href="#">Pricing Plans</a></li>
+                            <li><a href="#">FAQ</a></li>
+                            <li><a href="#">Contact Us</a></li>
+                        </ul>
+                    </div>
+
+                    <!-- Programs -->
+                    <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-duration="800" data-aos-delay="300">
+                        <div class="footer-col-title">Programs<span class="dot">.</span></div>
+                        <ul class="footer-links footer-links-2col">
+                            <li><a href="#">Science</a></li>
+                            <li><a href="#">Careers</a></li>
+                            <li><a href="#">Commerce</a></li>
+                            <li><a href="#">Prototype</a></li>
+                            <li><a href="#">Arts &amp; Design</a></li>
+                            <li><a href="#">Refund Policy</a></li>
+                            <li><a href="#">Robotics</a></li>
+                            <li><a href="#">How It Works</a></li>
+                            <li><a href="#">Game Design</a></li>
+                            <li><a href="#">Fashion Dev</a></li>
+                        </ul>
+                    </div>
+
+                    <!-- Get in Touch -->
+                    <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-duration="800" data-aos-delay="400">
+                        <div class="footer-col-title">Get in touch<span class="dot">.</span></div>
+
+                        <div class="footer-contact-item">
+                            <div class="footer-contact-icon"><i class="fa fa-phone"></i></div>
+                            <div>
+                                <span class="footer-contact-value">+1 (444) 000-8888</span>
+                                <span class="footer-contact-label">Phone number</span>
+                            </div>
+                        </div>
+
+                        <div class="footer-contact-item">
+                            <div class="footer-contact-icon"><i class="fa fa-envelope"></i></div>
+                            <div>
+                                <span class="footer-contact-value">info@JSM SR. SEC. SCHOOL.edu</span>
+                                <span class="footer-contact-label">Email address</span>
+                            </div>
+                        </div>
+
+                        <div class="footer-contact-item">
+                            <div class="footer-contact-icon"><i class="fa fa-location-dot"></i></div>
+                            <div>
+                                <span class="footer-contact-value">New York, US</span>
+                                <span class="footer-contact-label">12/A, New Booston Tower</span>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+            <!-- Bottom Bar -->
+            <div class="container">
+                <div class="footer-bottom">
+                    <a href="#" class="footer-bottom-brand">
+                        <div class="footer-bottom-logo"><i class="fa fa-university"></i></div>
+                        <span class="footer-bottom-name">JSM SR. SEC. SCHOOL.</span>
+                    </a>
+                    <p class="footer-copyright mb-0">
+                        Copyright & Design & Developed By &copy;
+                        <a href="https://brandingwaale.com/" target="_blank" class="highlight-brand">
+                            Brandingwaale Webtech
+                        </a>,
+                        All rights reserved
+                    </p>
+
+                </div>
+            </div>
+        </footer>
+    </section>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/js/bootstrap.bundle.min.js"></script>
+    <!-- AOS JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <script>
+        AOS.init({
+            once: true,
+            offset: 80,
+            easing: 'ease-out-cubic'
+        });
+    </script>
+    <script src="script.js"></script>
+
+</body>
+
+</html>
