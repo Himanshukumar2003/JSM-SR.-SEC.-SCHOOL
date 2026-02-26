@@ -56,3 +56,9 @@ document.querySelectorAll(".mobile-dropdown-toggle").forEach((toggle) => {
     }
   });
 });
+
+document.querySelectorAll(".campus-card").forEach((card) => {
+  const bg = card.querySelector(".campus-card-bg");
+  const img = card.getAttribute("data-img");
+  bg.style.backgroundImage = `url(${img})`;
+});
