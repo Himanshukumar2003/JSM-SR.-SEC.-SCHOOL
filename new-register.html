@@ -901,7 +901,9 @@
       <img src="img/Classroom.jpeg" alt="Apply for Admission" class="cta-card-img" data-aos="fade-right"
         data-aos-duration="1000" />
       <div class="cta-card-body" data-aos="fade-left" data-aos-duration="1000" data-aos-delay="200">
-        <h2 class="cta-card-title">Apply for <span class="underline-accent">admission?</span></h2>
+        <h2 class="cta-card-title">
+          Apply for <span class="underline-accent">admission?</span>
+        </h2>
         <p class="cta-card-text">
           A place to provide students with enough knowledge and skills in a
           complex world. Are you looking for exceptional education experience?
@@ -910,12 +912,12 @@
         <div class="cta-email-form">
           <input type="email" class="cta-email-input" placeholder="Email Address..." />
           <button class="cta-subscribe-btn">
-            Subscribe <i class="fa fa-arrow-up-right-from-square" style="font-size:0.75rem;"></i>
+            Subscribe
+            <i class="fa fa-arrow-up-right-from-square" style="font-size: 0.75rem"></i>
           </button>
         </div>
       </div>
     </div>
-
 
     <!-- Main Footer -->
     <footer class="main-footer">
@@ -924,7 +926,10 @@
 
           <!-- About -->
           <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-duration="800" data-aos-delay="100">
-            <div class="footer-col-title">About Us<span class="dot">.</span></div>
+            <a href="index.html" class="footer-logo-section">
+              <img src="img/logo.png" alt="Logo" class="footer-logo" />
+            </a>
+
             <p class="footer-brand-desc">
               JSM SR. SEC. SCHOOL is committed to providing quality education
               with modern facilities and a supportive learning environment.
@@ -1001,55 +1006,56 @@
         </div>
       </div>
     </footer>
+  </section>
 
 
-    <script>
-      // Form submission handler
-      document.getElementById('registrationForm').addEventListener('submit', function (e) {
-        e.preventDefault();
+  <script>
+    // Form submission handler
+    document.getElementById('registrationForm').addEventListener('submit', function (e) {
+      e.preventDefault();
 
-        // Collect form data
-        const formData = new FormData(this);
+      // Collect form data
+      const formData = new FormData(this);
 
-        // Show loading state
-        const submitBtn = this.querySelector('.btn-submit-form');
-        const originalText = submitBtn.innerHTML;
-        submitBtn.innerHTML = '<span>Submitting...</span> <i class="fa fa-spinner fa-spin"></i>';
-        submitBtn.disabled = true;
+      // Show loading state
+      const submitBtn = this.querySelector('.btn-submit-form');
+      const originalText = submitBtn.innerHTML;
+      submitBtn.innerHTML = '<span>Submitting...</span> <i class="fa fa-spinner fa-spin"></i>';
+      submitBtn.disabled = true;
 
-        // Simulate form submission
+      // Simulate form submission
+      setTimeout(() => {
+        submitBtn.innerHTML = '<span>Submitted Successfully!</span> <i class="fa fa-check"></i>';
+        submitBtn.style.background = '#22c55e';
+
+        // Reset after 3 seconds
         setTimeout(() => {
-          submitBtn.innerHTML = '<span>Submitted Successfully!</span> <i class="fa fa-check"></i>';
-          submitBtn.style.background = '#22c55e';
+          this.reset();
+          submitBtn.innerHTML = originalText;
+          submitBtn.style.background = '';
+          submitBtn.disabled = false;
+          alert('Thank you! Your application has been submitted successfully. Our team will contact you within 48 hours.');
+        }, 3000);
+      }, 2000);
+    });
 
-          // Reset after 3 seconds
-          setTimeout(() => {
-            this.reset();
-            submitBtn.innerHTML = originalText;
-            submitBtn.style.background = '';
-            submitBtn.disabled = false;
-            alert('Thank you! Your application has been submitted successfully. Our team will contact you within 48 hours.');
-          }, 3000);
-        }, 2000);
+    // Real-time validation feedback
+    document.querySelectorAll('.form-input-custom, .form-select-custom, .form-textarea-custom').forEach(input => {
+      input.addEventListener('blur', function () {
+        if (this.hasAttribute('required') && !this.value.trim()) {
+          this.style.borderColor = 'var(--crimson)';
+        } else {
+          this.style.borderColor = '';
+        }
       });
 
-      // Real-time validation feedback
-      document.querySelectorAll('.form-input-custom, .form-select-custom, .form-textarea-custom').forEach(input => {
-        input.addEventListener('blur', function () {
-          if (this.hasAttribute('required') && !this.value.trim()) {
-            this.style.borderColor = 'var(--crimson)';
-          } else {
-            this.style.borderColor = '';
-          }
-        });
-
-        input.addEventListener('input', function () {
-          if (this.style.borderColor === 'rgb(192, 22, 44)') {
-            this.style.borderColor = '';
-          }
-        });
+      input.addEventListener('input', function () {
+        if (this.style.borderColor === 'rgb(192, 22, 44)') {
+          this.style.borderColor = '';
+        }
       });
-    </script>
+    });
+  </script>
 </body>
 
 </html>
